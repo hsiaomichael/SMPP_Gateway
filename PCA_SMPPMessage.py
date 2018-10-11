@@ -9,6 +9,7 @@ import struct
 class SMPP_PDU_Reader:
     def __init__(self,command_length,Message):    
         try:    
+            
             Msg = "Init SMPP_PDU_Reader ..."
             PCA_GenLib.WriteLog(Msg,9)
             

@@ -304,12 +304,19 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
             
             Tag = "SYSTEM_ID"
             self.UID = PCA_XMLParser.GetXMLTagValue(XMLCFG,Tag)
+            Msg = "SYSTEM_ID  = <%s>" % (self.UID)
+            PCA_GenLib.WriteLog(Msg,1)
             
             Tag = "SYSTEM_TYPE"
             self.TYPE = PCA_XMLParser.GetXMLTagValue(XMLCFG,Tag)
+            Msg = "SYSTEM_TYPE  = <%s>" % (self.TYPE)
+            PCA_GenLib.WriteLog(Msg,1)
              
             Tag = "PASSWD"
             self.PASSWD = PCA_XMLParser.GetXMLTagValue(XMLCFG,Tag)
+            Msg = "PASSWD  = <%s>" % (self.PASSWD)
+            PCA_GenLib.WriteLog(Msg,1)
+            
             
             
             (APPCFG,XMLCFG) = PCA_XMLParser.GetTagSection(XMLCFG,StartTag,EndTag)
@@ -556,6 +563,8 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                         self.ConnectionLoginState[id(self.SocketConnection)] = 'Y'
                     else:
                         Msg = "incorrect bind info , send bind error %s " % (client_connection_id)
+                        PCA_GenLib.WriteLog(Msg,0)
+                        Msg = "input id:<%s>:type:<%s>:pwd:<%s> " % (system_id,system_type,passwd)
                         PCA_GenLib.WriteLog(Msg,0)
                         bind_error = chr(0x00)+chr(0x00)+chr(0x00)+chr(0x0d)
                         self.SMPPWriter.ConstructStatus(bind_error)

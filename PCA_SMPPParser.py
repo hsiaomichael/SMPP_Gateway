@@ -42,7 +42,7 @@ class Handler(PCA_Parser.ContentHandler):
             self.system_id = content     
         elif self.command_name == "system_type":
             self.system_type = content 
-        elif self.command_name == "passwd":
+        elif self.command_name == "password":
             self.passwd = content   
             
     def endDocument(self,debugstr,TID,SOURCD_ID,response_message ):
@@ -64,6 +64,7 @@ class Handler(PCA_Parser.ContentHandler):
          return self.command_status   
     def get_smpp_bind_info(self):
          return (self.system_id,self.system_type,self.passwd)
+        
 #########################################################################
 # 
 #
