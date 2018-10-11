@@ -1,139 +1,151 @@
-2018-10-11 18:18:54.707 DB0 PCA_GenLib.py(315)==> Debug level = <2>, Debug log = <SMPPGateway.log>
-2018-10-11 18:18:54.707 DB1 PCA_ServerSocket.py(29)==> Listen Host=<127.0.0.1>,Port=<5001>
-2018-10-11 18:18:54.708 DB0 PCA_ServerSocket.py(55)==> setsockopt..bind port = <5001>.
-2018-10-11 18:18:54.708 DB1 PCA_Gateway.py(336)==> CLIENT_SOCKET=PCA_SMPPClientSocket
-2018-10-11 18:18:54.710 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
-2018-10-11 18:18:54.711 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
-2018-10-11 18:18:54.711 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
-2018-10-11 18:18:54.711 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
-2018-10-11 18:18:54.713 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
-2018-10-11 18:18:54.713 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
-2018-10-11 18:18:54.714 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
-2018-10-11 18:18:55.215 DB1 PCA_Gateway.py(351)==> SOURCD_ID=1
-2018-10-11 18:18:55.217 DB1 PCA_Gateway.py(336)==> CLIENT_SOCKET=PCA_SMPPClientSocket
-2018-10-11 18:18:55.218 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
-2018-10-11 18:18:55.219 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
-2018-10-11 18:18:55.219 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
-2018-10-11 18:18:55.220 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
-2018-10-11 18:18:55.225 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
-2018-10-11 18:18:55.226 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
-2018-10-11 18:18:55.226 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
-2018-10-11 18:18:55.728 DB1 PCA_Gateway.py(351)==> SOURCD_ID=2
-2018-10-11 18:18:55.728 DB1 PCA_Gateway.py(336)==> CLIENT_SOCKET=PCA_SMPPClientSocket
-2018-10-11 18:18:55.729 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
-2018-10-11 18:18:55.729 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
-2018-10-11 18:18:55.730 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
-2018-10-11 18:18:55.730 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
-2018-10-11 18:18:55.731 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
-2018-10-11 18:18:55.731 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
-2018-10-11 18:18:55.732 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
-2018-10-11 18:18:56.232 DB1 PCA_Gateway.py(351)==> SOURCD_ID=3
-2018-10-11 18:18:56.233 DB1 PCA_Gateway.py(336)==> CLIENT_SOCKET=PCA_SMPPClientSocket
-2018-10-11 18:18:56.234 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
-2018-10-11 18:18:56.234 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
-2018-10-11 18:18:56.235 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
-2018-10-11 18:18:56.235 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
-2018-10-11 18:18:56.240 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
-2018-10-11 18:18:56.240 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
-2018-10-11 18:18:56.241 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
-2018-10-11 18:18:56.744 DB1 PCA_Gateway.py(351)==> SOURCD_ID=4
-2018-10-11 18:18:56.744 DB1 PCA_Gateway.py(336)==> CLIENT_SOCKET=PCA_SMPPClientSocket
-2018-10-11 18:18:56.745 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
-2018-10-11 18:18:56.745 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
-2018-10-11 18:18:56.746 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
-2018-10-11 18:18:56.746 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
-2018-10-11 18:18:56.752 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
-2018-10-11 18:18:56.753 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
-2018-10-11 18:18:56.753 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
-2018-10-11 18:18:57.255 DB1 PCA_Gateway.py(351)==> SOURCD_ID=5
-2018-10-11 18:18:57.255 DB1 PCA_Gateway.py(376)==> dispatcher server starting ........
-2018-10-11 18:18:58.346 DB1 PCA_Gateway.py(409)==> Dispatcher New Connection <139736417409296> from :('127.0.0.1', 36952)
-2018-10-11 18:18:58.347 DB2 PCA_Gateway.py(423)==> socket buffer : {} 
-2018-10-11 18:18:58.347 DB0 PCA_Gateway.py(431)==> Set ConnectionLoginState <139736417409296> to N 
-2018-10-11 18:18:58.348 DB2 PCA_Gateway.py(520)==> recv from Client : id=<139736417409296>
-2018-10-11 18:18:58.348 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<101>,command_length=<41>,command_id=<bind_transmitter>,command_status=<0>,sequence_number=<101>
-2018-10-11 18:18:58.348 DB1 PCA_Gateway.py(527)==> recv from Client =*bind_transmitter*
-2018-10-11 18:18:58.348 DB0 PCA_Gateway.py(535)==> recv from Client but no bind request yet ,id=<139736417409296>
-2018-10-11 18:18:58.349 DB0 PCA_Gateway.py(563)==> send response back to Client 
-2018-10-11 18:18:58.351 DB2 PCA_Gateway.py(520)==> recv from Client : id=<139736417409296>
-2018-10-11 18:18:58.352 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<102>,command_length=<69>,command_id=<submit_sm>,command_status=<0>,sequence_number=<102>
-2018-10-11 18:18:58.352 DB1 PCA_Gateway.py(527)==> recv from Client =*submit_sm*
-2018-10-11 18:18:58.352 DB1 PCA_Gateway.py(584)==> target_id = 1
-2018-10-11 18:18:58.353 DB2 PCA_Gateway.py(609)==> send to Server Source_id=<1> ok 
-2018-10-11 18:18:58.356 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<102>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<102>
-2018-10-11 18:18:58.356 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
-2018-10-11 18:18:58.357 DB1 PCA_Gateway.py(179)==> send back to Client ok : id=<139736417409296>
-2018-10-11 18:19:00.364 DB2 PCA_Gateway.py(520)==> recv from Client : id=<139736417409296>
-2018-10-11 18:19:00.365 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<103>,command_length=<69>,command_id=<submit_sm>,command_status=<0>,sequence_number=<103>
-2018-10-11 18:19:00.365 DB1 PCA_Gateway.py(527)==> recv from Client =*submit_sm*
-2018-10-11 18:19:00.365 DB1 PCA_Gateway.py(584)==> target_id = 2
-2018-10-11 18:19:00.366 DB2 PCA_Gateway.py(609)==> send to Server Source_id=<2> ok 
-2018-10-11 18:19:00.369 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<103>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<103>
-2018-10-11 18:19:00.370 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
-2018-10-11 18:19:00.371 DB1 PCA_Gateway.py(179)==> send back to Client ok : id=<139736417409296>
-2018-10-11 18:19:02.376 DB2 PCA_Gateway.py(520)==> recv from Client : id=<139736417409296>
-2018-10-11 18:19:02.376 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<104>,command_length=<69>,command_id=<submit_sm>,command_status=<0>,sequence_number=<104>
-2018-10-11 18:19:02.377 DB1 PCA_Gateway.py(527)==> recv from Client =*submit_sm*
-2018-10-11 18:19:02.377 DB1 PCA_Gateway.py(584)==> target_id = 3
-2018-10-11 18:19:02.378 DB2 PCA_Gateway.py(609)==> send to Server Source_id=<3> ok 
-2018-10-11 18:19:02.381 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<104>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<104>
-2018-10-11 18:19:02.381 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
-2018-10-11 18:19:02.382 DB1 PCA_Gateway.py(179)==> send back to Client ok : id=<139736417409296>
-2018-10-11 18:19:04.388 DB2 PCA_Gateway.py(520)==> recv from Client : id=<139736417409296>
-2018-10-11 18:19:04.389 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<105>,command_length=<69>,command_id=<submit_sm>,command_status=<0>,sequence_number=<105>
-2018-10-11 18:19:04.389 DB1 PCA_Gateway.py(527)==> recv from Client =*submit_sm*
-2018-10-11 18:19:04.389 DB1 PCA_Gateway.py(584)==> target_id = 4
-2018-10-11 18:19:04.390 DB2 PCA_Gateway.py(609)==> send to Server Source_id=<4> ok 
-2018-10-11 18:19:04.394 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<105>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<105>
-2018-10-11 18:19:04.394 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
-2018-10-11 18:19:04.395 DB1 PCA_Gateway.py(179)==> send back to Client ok : id=<139736417409296>
-2018-10-11 18:19:06.401 DB2 PCA_Gateway.py(520)==> recv from Client : id=<139736417409296>
-2018-10-11 18:19:06.402 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<106>,command_length=<69>,command_id=<submit_sm>,command_status=<0>,sequence_number=<106>
-2018-10-11 18:19:06.402 DB1 PCA_Gateway.py(527)==> recv from Client =*submit_sm*
-2018-10-11 18:19:06.402 DB1 PCA_Gateway.py(584)==> target_id = 5
-2018-10-11 18:19:06.403 DB2 PCA_Gateway.py(609)==> send to Server Source_id=<5> ok 
-2018-10-11 18:19:06.407 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<106>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<106>
-2018-10-11 18:19:06.408 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
-2018-10-11 18:19:06.408 DB1 PCA_Gateway.py(179)==> send back to Client ok : id=<139736417409296>
-2018-10-11 18:19:08.414 DB2 PCA_Gateway.py(520)==> recv from Client : id=<139736417409296>
-2018-10-11 18:19:08.414 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<107>,command_length=<69>,command_id=<submit_sm>,command_status=<0>,sequence_number=<107>
-2018-10-11 18:19:08.415 DB1 PCA_Gateway.py(527)==> recv from Client =*submit_sm*
-2018-10-11 18:19:08.415 DB1 PCA_Gateway.py(584)==> target_id = 1
-2018-10-11 18:19:08.415 DB2 PCA_Gateway.py(609)==> send to Server Source_id=<1> ok 
-2018-10-11 18:19:08.419 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<107>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<107>
-2018-10-11 18:19:08.420 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
-2018-10-11 18:19:08.421 DB1 PCA_Gateway.py(179)==> send back to Client ok : id=<139736417409296>
-2018-10-11 18:19:10.424 DB2 PCA_Gateway.py(520)==> recv from Client : id=<139736417409296>
-2018-10-11 18:19:10.425 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<108>,command_length=<69>,command_id=<submit_sm>,command_status=<0>,sequence_number=<108>
-2018-10-11 18:19:10.425 DB1 PCA_Gateway.py(527)==> recv from Client =*submit_sm*
-2018-10-11 18:19:10.426 DB1 PCA_Gateway.py(584)==> target_id = 2
-2018-10-11 18:19:10.426 DB2 PCA_Gateway.py(609)==> send to Server Source_id=<2> ok 
-2018-10-11 18:19:10.430 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<108>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<108>
-2018-10-11 18:19:10.431 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
-2018-10-11 18:19:10.432 DB1 PCA_Gateway.py(179)==> send back to Client ok : id=<139736417409296>
-2018-10-11 18:19:12.437 DB2 PCA_Gateway.py(520)==> recv from Client : id=<139736417409296>
-2018-10-11 18:19:12.438 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<109>,command_length=<69>,command_id=<submit_sm>,command_status=<0>,sequence_number=<109>
-2018-10-11 18:19:12.438 DB1 PCA_Gateway.py(527)==> recv from Client =*submit_sm*
-2018-10-11 18:19:12.439 DB1 PCA_Gateway.py(584)==> target_id = 3
-2018-10-11 18:19:12.439 DB2 PCA_Gateway.py(609)==> send to Server Source_id=<3> ok 
-2018-10-11 18:19:12.443 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<109>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<109>
-2018-10-11 18:19:12.444 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
-2018-10-11 18:19:12.445 DB1 PCA_Gateway.py(179)==> send back to Client ok : id=<139736417409296>
-2018-10-11 18:19:14.452 DB2 PCA_Gateway.py(520)==> recv from Client : id=<139736417409296>
-2018-10-11 18:19:14.452 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<110>,command_length=<69>,command_id=<submit_sm>,command_status=<0>,sequence_number=<110>
-2018-10-11 18:19:14.453 DB1 PCA_Gateway.py(527)==> recv from Client =*submit_sm*
-2018-10-11 18:19:14.453 DB1 PCA_Gateway.py(584)==> target_id = 4
-2018-10-11 18:19:14.455 DB2 PCA_Gateway.py(609)==> send to Server Source_id=<4> ok 
-2018-10-11 18:19:14.458 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<110>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<110>
-2018-10-11 18:19:14.459 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
-2018-10-11 18:19:14.459 DB1 PCA_Gateway.py(179)==> send back to Client ok : id=<139736417409296>
-2018-10-11 18:19:16.464 DB2 PCA_Gateway.py(520)==> recv from Client : id=<139736417409296>
-2018-10-11 18:19:16.464 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<111>,command_length=<69>,command_id=<submit_sm>,command_status=<0>,sequence_number=<111>
-2018-10-11 18:19:16.465 DB1 PCA_Gateway.py(527)==> recv from Client =*submit_sm*
-2018-10-11 18:19:16.465 DB1 PCA_Gateway.py(584)==> target_id = 5
-2018-10-11 18:19:16.465 DB2 PCA_Gateway.py(609)==> send to Server Source_id=<5> ok 
-2018-10-11 18:19:16.468 DB2 PCA_SMPPParser.py(142)==> REQ_TID=<111>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<111>
-2018-10-11 18:19:16.469 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
-2018-10-11 18:19:16.469 DB1 PCA_Gateway.py(179)==> send back to Client ok : id=<139736417409296>
-2018-10-11 18:19:16.822 DB0 PCA_Gateway.py(448)==> dispatcher error : <<type 'exceptions.KeyboardInterrupt'>>,<> 
-2018-10-11 18:19:17.015 DB0 PCA_GenLib.py(521)==> Close Debug Log , Debug level = <2>, Debug log = <SMPPGateway.log>
+2018-10-11 21:13:35.375 DB0 PCA_GenLib.py(315)==> Debug level = <2>, Debug log = <SMPPGateway.log>
+2018-10-11 21:13:35.376 DB1 PCA_ServerSocket.py(29)==> Listen Host=<127.0.0.1>,Port=<5001>
+2018-10-11 21:13:35.377 DB0 PCA_ServerSocket.py(55)==> setsockopt..bind port = <5001>.
+2018-10-11 21:13:35.377 DB1 PCA_Gateway.py(345)==> CLIENT_SOCKET=PCA_SMPPClientSocket
+2018-10-11 21:13:35.378 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
+2018-10-11 21:13:35.378 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
+2018-10-11 21:13:35.379 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
+2018-10-11 21:13:35.379 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
+2018-10-11 21:13:35.383 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
+2018-10-11 21:13:35.384 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
+2018-10-11 21:13:35.384 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
+2018-10-11 21:13:35.885 DB1 PCA_Gateway.py(360)==> SOURCD_ID=1
+2018-10-11 21:13:35.886 DB1 PCA_Gateway.py(345)==> CLIENT_SOCKET=PCA_SMPPClientSocket
+2018-10-11 21:13:35.887 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
+2018-10-11 21:13:35.887 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
+2018-10-11 21:13:35.888 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
+2018-10-11 21:13:35.888 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
+2018-10-11 21:13:35.894 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
+2018-10-11 21:13:35.895 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
+2018-10-11 21:13:35.896 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
+2018-10-11 21:13:36.399 DB1 PCA_Gateway.py(360)==> SOURCD_ID=2
+2018-10-11 21:13:36.400 DB1 PCA_Gateway.py(345)==> CLIENT_SOCKET=PCA_SMPPClientSocket
+2018-10-11 21:13:36.400 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
+2018-10-11 21:13:36.401 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
+2018-10-11 21:13:36.403 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
+2018-10-11 21:13:36.403 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
+2018-10-11 21:13:36.407 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
+2018-10-11 21:13:36.408 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
+2018-10-11 21:13:36.408 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
+2018-10-11 21:13:36.911 DB1 PCA_Gateway.py(360)==> SOURCD_ID=3
+2018-10-11 21:13:36.912 DB1 PCA_Gateway.py(345)==> CLIENT_SOCKET=PCA_SMPPClientSocket
+2018-10-11 21:13:36.914 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
+2018-10-11 21:13:36.915 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
+2018-10-11 21:13:36.916 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
+2018-10-11 21:13:36.917 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
+2018-10-11 21:13:36.922 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
+2018-10-11 21:13:36.922 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
+2018-10-11 21:13:36.923 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
+2018-10-11 21:13:37.424 DB1 PCA_Gateway.py(360)==> SOURCD_ID=4
+2018-10-11 21:13:37.425 DB1 PCA_Gateway.py(345)==> CLIENT_SOCKET=PCA_SMPPClientSocket
+2018-10-11 21:13:37.426 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
+2018-10-11 21:13:37.426 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
+2018-10-11 21:13:37.427 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
+2018-10-11 21:13:37.427 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
+2018-10-11 21:13:37.431 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
+2018-10-11 21:13:37.432 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
+2018-10-11 21:13:37.432 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
+2018-10-11 21:13:37.933 DB1 PCA_Gateway.py(360)==> SOURCD_ID=5
+2018-10-11 21:13:37.934 DB1 PCA_Gateway.py(385)==> dispatcher server starting ........
+2018-10-11 21:13:38.265 DB1 PCA_Gateway.py(418)==> Dispatcher New Connection <140135523949600> from :('127.0.0.1', 37310)
+2018-10-11 21:13:38.266 DB2 PCA_Gateway.py(432)==> socket buffer : {} 
+2018-10-11 21:13:38.266 DB0 PCA_Gateway.py(440)==> Set ConnectionLoginState <140135523949600> to N 
+2018-10-11 21:13:38.266 DB2 PCA_Gateway.py(529)==> recv from Client : id=<140135523949600>
+2018-10-11 21:13:38.267 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<101>,command_length=<41>,command_id=<bind_transmitter>,command_status=<0>,sequence_number=<101>
+2018-10-11 21:13:38.267 DB2 PCA_SMPPParser.py(164)==> system_id = <SMPPTEST>
+2018-10-11 21:13:38.267 DB2 PCA_SMPPParser.py(174)==> password = <my_passwd>
+2018-10-11 21:13:38.267 DB2 PCA_SMPPParser.py(184)==> system_type = <>
+2018-10-11 21:13:38.267 DB1 PCA_Gateway.py(536)==> recv from Client =*bind_transmitter*
+2018-10-11 21:13:38.268 DB0 PCA_Gateway.py(544)==> recv from Client but no bind request yet ,id=<140135523949600>
+2018-10-11 21:13:38.268 DB0 PCA_Gateway.py(558)==> incorrect bind info , send bind error 140135523949600 
+2018-10-11 21:13:38.268 DB0 PCA_Gateway.py(588)==> send response back to Client 
+2018-10-11 21:13:38.270 DB2 PCA_ServerSocket.py(203)==> Client Close Connection id=<140135523949600>
+2018-10-11 21:13:38.270 DB2 PCA_ServerSocket.py(222)==> Del ConnectionLoginState <140135523949600>
+2018-10-11 21:13:38.270 DB1 PCA_Gateway.py(509)==> RequestHandler readDataFromSocket Client socket.error
+2018-10-11 21:13:38.270 DB1 PCA_Gateway.py(512)==> close Client connection id=<140135523949600>
+2018-10-11 21:13:38.270 DB0 PCA_Gateway.py(521)==> Del ConnectionLoginState
+2018-10-11 21:13:38.271 DB1 PCA_Gateway.py(677)==> close client connection id=<140135523949600>
+2018-10-11 21:14:07.288 DB1 PCA_Gateway.py(418)==> Dispatcher New Connection <140135523949712> from :('127.0.0.1', 37312)
+2018-10-11 21:14:07.289 DB2 PCA_Gateway.py(432)==> socket buffer : {} 
+2018-10-11 21:14:07.289 DB0 PCA_Gateway.py(440)==> Set ConnectionLoginState <140135523949712> to N 
+2018-10-11 21:14:07.289 DB2 PCA_Gateway.py(529)==> recv from Client : id=<140135523949712>
+2018-10-11 21:14:07.289 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<101>,command_length=<41>,command_id=<bind_transmitter>,command_status=<0>,sequence_number=<101>
+2018-10-11 21:14:07.290 DB2 PCA_SMPPParser.py(164)==> system_id = <SMPPTEST>
+2018-10-11 21:14:07.290 DB2 PCA_SMPPParser.py(174)==> password = <my_passwd>
+2018-10-11 21:14:07.290 DB2 PCA_SMPPParser.py(184)==> system_type = <>
+2018-10-11 21:14:07.290 DB1 PCA_Gateway.py(536)==> recv from Client =*bind_transmitter*
+2018-10-11 21:14:07.290 DB0 PCA_Gateway.py(544)==> recv from Client but no bind request yet ,id=<140135523949712>
+2018-10-11 21:14:07.290 DB0 PCA_Gateway.py(558)==> incorrect bind info , send bind error 140135523949712 
+2018-10-11 21:14:07.291 DB0 PCA_Gateway.py(588)==> send response back to Client 
+2018-10-11 21:14:07.292 DB2 PCA_ServerSocket.py(203)==> Client Close Connection id=<140135523949712>
+2018-10-11 21:14:07.292 DB2 PCA_ServerSocket.py(222)==> Del ConnectionLoginState <140135523949712>
+2018-10-11 21:14:07.293 DB1 PCA_Gateway.py(509)==> RequestHandler readDataFromSocket Client socket.error
+2018-10-11 21:14:07.293 DB1 PCA_Gateway.py(512)==> close Client connection id=<140135523949712>
+2018-10-11 21:14:07.293 DB0 PCA_Gateway.py(521)==> Del ConnectionLoginState
+2018-10-11 21:14:07.293 DB1 PCA_Gateway.py(677)==> close client connection id=<140135523949712>
+2018-10-11 21:14:28.337 DB1 PCA_Gateway.py(418)==> Dispatcher New Connection <140135523949600> from :('127.0.0.1', 37314)
+2018-10-11 21:14:28.337 DB2 PCA_Gateway.py(432)==> socket buffer : {} 
+2018-10-11 21:14:28.339 DB0 PCA_Gateway.py(440)==> Set ConnectionLoginState <140135523949600> to N 
+2018-10-11 21:14:28.339 DB2 PCA_Gateway.py(529)==> recv from Client : id=<140135523949600>
+2018-10-11 21:14:28.339 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<0>,command_length=<37>,command_id=<bind_transmitter>,command_status=<0>,sequence_number=<0>
+2018-10-11 21:14:28.339 DB2 PCA_SMPPParser.py(164)==> system_id = <jerryl>
+2018-10-11 21:14:28.340 DB2 PCA_SMPPParser.py(174)==> password = <jerryl>
+2018-10-11 21:14:28.340 DB2 PCA_SMPPParser.py(184)==> system_type = <1>
+2018-10-11 21:14:28.340 DB1 PCA_Gateway.py(536)==> recv from Client =*bind_transmitter*
+2018-10-11 21:14:28.340 DB0 PCA_Gateway.py(544)==> recv from Client but no bind request yet ,id=<140135523949600>
+2018-10-11 21:14:28.340 DB0 PCA_Gateway.py(558)==> incorrect bind info , send bind error 140135523949600 
+2018-10-11 21:14:28.341 DB0 PCA_Gateway.py(588)==> send response back to Client 
+2018-10-11 21:14:31.343 DB2 PCA_ServerSocket.py(203)==> Client Close Connection id=<140135523949600>
+2018-10-11 21:14:31.343 DB2 PCA_ServerSocket.py(222)==> Del ConnectionLoginState <140135523949600>
+2018-10-11 21:14:31.344 DB1 PCA_Gateway.py(509)==> RequestHandler readDataFromSocket Client socket.error
+2018-10-11 21:14:31.344 DB1 PCA_Gateway.py(512)==> close Client connection id=<140135523949600>
+2018-10-11 21:14:31.344 DB0 PCA_Gateway.py(521)==> Del ConnectionLoginState
+2018-10-11 21:14:31.345 DB1 PCA_Gateway.py(677)==> close client connection id=<140135523949600>
+2018-10-11 21:15:14.386 DB1 PCA_Gateway.py(418)==> Dispatcher New Connection <140135523949712> from :('127.0.0.1', 37316)
+2018-10-11 21:15:14.386 DB2 PCA_Gateway.py(432)==> socket buffer : {} 
+2018-10-11 21:15:14.387 DB0 PCA_Gateway.py(440)==> Set ConnectionLoginState <140135523949712> to N 
+2018-10-11 21:15:14.388 DB2 PCA_Gateway.py(529)==> recv from Client : id=<140135523949712>
+2018-10-11 21:15:14.388 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<0>,command_length=<37>,command_id=<bind_transmitter>,command_status=<0>,sequence_number=<0>
+2018-10-11 21:15:14.388 DB2 PCA_SMPPParser.py(164)==> system_id = <jerryl>
+2018-10-11 21:15:14.389 DB2 PCA_SMPPParser.py(174)==> password = <jerryl>
+2018-10-11 21:15:14.389 DB2 PCA_SMPPParser.py(184)==> system_type = <1>
+2018-10-11 21:15:14.389 DB1 PCA_Gateway.py(536)==> recv from Client =*bind_transmitter*
+2018-10-11 21:15:14.389 DB0 PCA_Gateway.py(544)==> recv from Client but no bind request yet ,id=<140135523949712>
+2018-10-11 21:15:14.389 DB0 PCA_Gateway.py(558)==> incorrect bind info , send bind error 140135523949712 
+2018-10-11 21:15:14.390 DB0 PCA_Gateway.py(588)==> send response back to Client 
+2018-10-11 21:15:14.394 DB2 PCA_Gateway.py(529)==> recv from Client : id=<140135523949712>
+2018-10-11 21:15:14.394 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<66>,command_length=<60>,command_id=<submit_sm>,command_status=<0>,sequence_number=<66>
+2018-10-11 21:15:14.394 DB1 PCA_Gateway.py(536)==> recv from Client =*submit_sm*
+2018-10-11 21:15:14.394 DB0 PCA_Gateway.py(544)==> recv from Client but no bind request yet ,id=<140135523949712>
+2018-10-11 21:15:14.395 DB0 PCA_Gateway.py(570)==>  Incorrect BIND Status 140135523949712 
+2018-10-11 21:15:14.395 DB0 PCA_Gateway.py(588)==> send response back to Client 
+2018-10-11 21:15:14.397 DB2 PCA_Gateway.py(529)==> recv from Client : id=<140135523949712>
+2018-10-11 21:15:14.397 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<99>,command_length=<16>,command_id=<unbind>,command_status=<0>,sequence_number=<99>
+2018-10-11 21:15:14.397 DB1 PCA_Gateway.py(536)==> recv from Client =*unbind*
+2018-10-11 21:15:14.397 DB0 PCA_Gateway.py(544)==> recv from Client but no bind request yet ,id=<140135523949712>
+2018-10-11 21:15:14.398 DB0 PCA_Gateway.py(588)==> send response back to Client 
+2018-10-11 21:15:17.398 DB2 PCA_ServerSocket.py(222)==> Del ConnectionLoginState <140135523949712>
+2018-10-11 21:15:17.398 DB1 PCA_Gateway.py(509)==> RequestHandler readDataFromSocket Client socket.error
+2018-10-11 21:15:17.399 DB1 PCA_Gateway.py(512)==> close Client connection id=<140135523949712>
+2018-10-11 21:15:17.399 DB0 PCA_Gateway.py(521)==> Del ConnectionLoginState
+2018-10-11 21:15:17.399 DB1 PCA_Gateway.py(677)==> close client connection id=<140135523949712>
+2018-10-11 21:15:52.311 DB1 PCA_Gateway.py(418)==> Dispatcher New Connection <140135523949600> from :('127.0.0.1', 37318)
+2018-10-11 21:15:52.311 DB2 PCA_Gateway.py(432)==> socket buffer : {} 
+2018-10-11 21:15:52.312 DB0 PCA_Gateway.py(440)==> Set ConnectionLoginState <140135523949600> to N 
+2018-10-11 21:15:52.312 DB2 PCA_Gateway.py(529)==> recv from Client : id=<140135523949600>
+2018-10-11 21:15:52.312 DB2 PCA_SMPPParser.py(151)==> REQ_TID=<0>,command_length=<37>,command_id=<bind_transmitter>,command_status=<0>,sequence_number=<0>
+2018-10-11 21:15:52.312 DB2 PCA_SMPPParser.py(164)==> system_id = <jerryl>
+2018-10-11 21:15:52.313 DB2 PCA_SMPPParser.py(174)==> password = <jerryl>
+2018-10-11 21:15:52.313 DB2 PCA_SMPPParser.py(184)==> system_type = <1>
+2018-10-11 21:15:52.313 DB1 PCA_Gateway.py(536)==> recv from Client =*bind_transmitter*
+2018-10-11 21:15:52.313 DB0 PCA_Gateway.py(544)==> recv from Client but no bind request yet ,id=<140135523949600>
+2018-10-11 21:15:52.313 DB0 PCA_Gateway.py(558)==> incorrect bind info , send bind error 140135523949600 
+2018-10-11 21:15:52.313 DB0 PCA_Gateway.py(588)==> send response back to Client 
+2018-10-11 21:15:55.315 DB2 PCA_ServerSocket.py(203)==> Client Close Connection id=<140135523949600>
+2018-10-11 21:15:55.316 DB2 PCA_ServerSocket.py(222)==> Del ConnectionLoginState <140135523949600>
+2018-10-11 21:15:55.316 DB1 PCA_Gateway.py(509)==> RequestHandler readDataFromSocket Client socket.error
+2018-10-11 21:15:55.317 DB1 PCA_Gateway.py(512)==> close Client connection id=<140135523949600>
+2018-10-11 21:15:55.317 DB0 PCA_Gateway.py(521)==> Del ConnectionLoginState
+2018-10-11 21:15:55.317 DB1 PCA_Gateway.py(677)==> close client connection id=<140135523949600>
+2018-10-11 21:16:02.843 DB0 PCA_Gateway.py(457)==> dispatcher error : <<type 'exceptions.KeyboardInterrupt'>>,<> 
+2018-10-11 21:16:03.025 DB0 PCA_GenLib.py(521)==> Close Debug Log , Debug level = <2>, Debug log = <SMPPGateway.log>

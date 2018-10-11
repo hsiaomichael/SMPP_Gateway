@@ -1,5 +1,5 @@
 
-import sys,struct,time
+import sys,struct,time,string
 import PCA_GenLib
 import PCA_Parser
 import PCA_SMPP_Parameter_Tag
@@ -22,6 +22,7 @@ class Handler(PCA_Parser.ContentHandler):
         self.command_desc = None
         self.seq_no = 0
         self.command_status = 0
+        (self.system_id,self.system_type,self.passwd) = ("na","na","na")
     
     
     def startElement(self, name, attrs):
@@ -37,8 +38,13 @@ class Handler(PCA_Parser.ContentHandler):
             self.seq_no = content      
         elif self.command_name == "command_status":
             self.command_status = content      
+        elif self.command_name == "system_id":
+            self.system_id = content     
+        elif self.command_name == "system_type":
+            self.system_type = content 
+        elif self.command_name == "passwd":
+            self.passwd = content   
             
-        
     def endDocument(self,debugstr,TID,SOURCD_ID,response_message ):
         self.DebugStr = debugstr
         self.TID = TID
@@ -56,6 +62,8 @@ class Handler(PCA_Parser.ContentHandler):
          return self.command_desc   
     def get_smpp_command_status(self):
          return self.command_status   
+    def get_smpp_bind_info(self):
+         return (self.system_id,self.system_type,self.passwd)
 #########################################################################
 # 
 #
@@ -115,6 +123,7 @@ class Parser(PCA_Parser.Parser):
                 name = "command_id"
                 attrs = source[0:4]            
                 content = struct.unpack("!i",attrs)[0]
+                command_id = 'na'
                 try:
                     command_id = PCA_SMPP_Parameter_Tag.command_id_dict[attrs]
                 except:
@@ -143,6 +152,38 @@ class Parser(PCA_Parser.Parser):
                 PCA_GenLib.WriteLog(Msg,2)
                 
                 self.DebugStr = Msg
+                
+                source = source[4:]
+                if command_id == "bind_transmitter":
+                    start_pos = string.find(source,chr(0x00))                    
+                    system_id = source[0:start_pos]                    
+                    name = "system_id"
+                    attrs = system_id    
+                    content = attrs
+                    self.set_handler(name,attrs,content)
+                    Msg = "system_id = <%s>" % system_id
+                    PCA_GenLib.WriteLog(Msg,2)
+                    
+                    source = source[start_pos+1:]
+                    start_pos = string.find(source,chr(0x00))
+                    password = source[0:start_pos]                    
+                    name = "password"
+                    attrs = password    
+                    content = attrs
+                    self.set_handler(name,attrs,content)
+                    Msg = "password = <%s>" % password
+                    PCA_GenLib.WriteLog(Msg,2)
+                    
+                    source = source[start_pos+1:]
+                    start_pos = string.find(source,chr(0x00))
+                    system_type = source[0:start_pos]                    
+                    name = "system_type"
+                    attrs = system_type    
+                    content = attrs
+                    self.set_handler(name,attrs,content)
+                    Msg = "system_type = <%s>" % system_type
+                    PCA_GenLib.WriteLog(Msg,2)
+                  
                 
             
             if self.StartParsing == 1:

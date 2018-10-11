@@ -120,7 +120,21 @@ class SMPP_PDU_Writer:
             PCA_GenLib.WriteLog(Msg,0)            
             raise
             
+        
+    def ConstructStatus(self,command_status):
+        try:    
+            Msg = "Init ConstructStatus ..."
+            PCA_GenLib.WriteLog(Msg,9)
             
+            self.command_status = command_status
+           
+            
+            Msg = "ConstructStatus Ok"
+            PCA_GenLib.WriteLog(Msg,9)
+        except :
+            Msg = "ConstructStatus  error : <%s>,<%s> " % (sys.exc_type,sys.exc_value)
+            PCA_GenLib.WriteLog(Msg,0)            
+            raise          
     def ConstructParameter(self,*Parms):
         try:    
             Msg = "ConstructParameter ..."

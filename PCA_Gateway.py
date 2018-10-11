@@ -302,6 +302,15 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
             StartTag = "<%s>" % Tag
             EndTag = "</%s>" % Tag
             
+            Tag = "SYSTEM_ID"
+            self.UID = PCA_XMLParser.GetXMLTagValue(XMLCFG,Tag)
+            
+            Tag = "SYSTEM_TYPE"
+            self.TYPE = PCA_XMLParser.GetXMLTagValue(XMLCFG,Tag)
+             
+            Tag = "PASSWD"
+            self.PASSWD = PCA_XMLParser.GetXMLTagValue(XMLCFG,Tag)
+            
             
             (APPCFG,XMLCFG) = PCA_XMLParser.GetTagSection(XMLCFG,StartTag,EndTag)
             
@@ -538,16 +547,32 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                 self.SMPPWriter = PCA_SMPPMessage.SMPP_PDU_Writer(command_seq_no)
          
                 if command_id == "bind_transmitter":
-                    self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.bind_transmitter_resp)
-                    self.response_message = self.SMPPWriter.ConstructParameter("gateway")
-                    self.ConnectionLoginState[id(self.SocketConnection)] = 'Y'
+                    (system_id,system_type,passwd) = self.handler.get_smpp_bind_info()
+                    
+                    if (system_id == self.UID) and (system_type == self.TYPE) and (passwd == self.PASSWD):           
+                        self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.bind_transmitter_resp)
+                        self.response_message = self.SMPPWriter.ConstructParameter("gateway")
+                    
+                        self.ConnectionLoginState[id(self.SocketConnection)] = 'Y'
+                    else:
+                        Msg = "incorrect bind info , send bind error %s " % (client_connection_id)
+                        PCA_GenLib.WriteLog(Msg,0)
+                        bind_error = chr(0x00)+chr(0x00)+chr(0x00)+chr(0x0d)
+                        self.SMPPWriter.ConstructStatus(bind_error)
+                        self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.bind_transmitter_resp)
+                        self.response_message = self.SMPPWriter.ConstructParameter("bind error")
+                        
                 elif command_id == "bind_receiver":                    
                     self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.bind_receiver_resp)
                     self.response_message = self.SMPPWriter.ConstructParameter("gateway")
                     self.ConnectionLoginState[id(self.SocketConnection)] = 'Y'
-                #elif command_id == "submit_sm":                    
-                #    self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.submit_sm_resp)
-                #    self.response_message = self.SMPPWriter.ConstructParameter("gateway")
+                elif command_id == "submit_sm":            
+                    Msg = " Incorrect BIND Status %s " % (client_connection_id)
+                    PCA_GenLib.WriteLog(Msg,0)
+                    smpp_command_id_incorrect_bind_status = chr(0x00)+chr(0x00)+chr(0x00)+chr(0x04)
+                    self.SMPPWriter.ConstructStatus(smpp_command_id_incorrect_bind_status)
+                    self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.submit_sm_resp)
+                    self.response_message = self.SMPPWriter.ConstructParameter("submit error")
               
                 elif command_id == "unbind":                    
                     self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.unbind_resp)
