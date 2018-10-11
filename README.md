@@ -1,7 +1,8 @@
 Installation Procedure .
 
-Ack as SMPP Gateway , receive SMPP request and forward to remote SMSC.
+Ack as SMPP Gateway , receive client SMPP request and forward to server:remote SMSC.
 
+ToDo : receive server delivery_sm request and send to client side
 
 </br>
 copy all files to same directory
@@ -12,4 +13,3 @@ chmod +x run.sh
 </br>./run.sh
   
 
-</br> Michael Hsiao
