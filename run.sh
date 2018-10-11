@@ -1,0 +1,1 @@
+python SMPPGateway SMPPGateway.cfg
