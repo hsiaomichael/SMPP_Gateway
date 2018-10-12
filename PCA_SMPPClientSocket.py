@@ -84,6 +84,11 @@ class Connector(PCA_ClientSocket.Connector):
             Tag = "PASSWD"
             self.PASSWD = PCA_XMLParser.GetXMLTagValue(XMLCFG,Tag)
             
+            Tag = "SOURCD_ID"
+            self.SOURCD_ID = PCA_XMLParser.GetXMLTagValue(XMLCFG,Tag)
+            
+            
+            
             Msg = "Connector OK."
             PCA_GenLib.WriteLog(Msg,9)                    
                     
@@ -241,6 +246,14 @@ class Connector(PCA_ClientSocket.Connector):
             self.Close()
             raise            
 
+  
+    ########################################################    
+    ## Close Socket    ##
+    ##    ##
+    ########################################################    
+    def get_SOURCD_ID(self):
+        
+        return self.SOURCD_ID   
     
     ########################################################    
     ## Close Socket    ##

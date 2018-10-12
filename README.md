@@ -1,10 +1,13 @@
 Installation Procedure .
 
-Ack as SMPP Gateway , receive client SMPP request and forward to server:remote SMSC.
-expected 1 client connection (response always send to latest client connection)
-i.e. 1 client connection to multi-server connection (and using b-address binding )
+Ack as SMPP Gateway 
 
-ToDo : receive server delivery_sm request and send to client side
+1 : accept smpp client bind_tranceiver connection
+2 : connect to remote SMSC with multi-smpp-connection (bind smpp_transciver)
+3 : receive client submit_sm request and send to service(remote SMSC) using b-address binding
+4 : receive remote SMSC deliver_sm request and send back to client
+
+ps : deliver_sm request always send to latest smpp client connection
 
 </br>
 copy all files to same directory

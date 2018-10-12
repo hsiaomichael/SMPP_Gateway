@@ -85,6 +85,8 @@ class ResponseHandler(PCA_ServerSocket.Acceptor):
     def handle_event(self,SocketBuffer,ClientConnector):
         global ExitFlag
         
+        AcceptorConnection = None
+        
         try:        
             Message = None
             
@@ -137,41 +139,75 @@ class ResponseHandler(PCA_ServerSocket.Acceptor):
                 self.parser.parse(Message)
                
                 command_id = self.handler.get_smpp_command_desc()
+                command_seq_no = self.handler.get_smpp_seq_no()
                 Msg = "recv from Server =*%s*" % command_id
                 PCA_GenLib.WriteLog(Msg,1)
                 #####################################################################
                 ##                Send back to client                 
                 ##################################################################### 
-                ServerID = "new_client"
-                
-                
-                if SocketBuffer.has_key(ServerID):
-                    SocketMutex.acquire() 
+                   
+                ServerID = command_seq_no
+                if command_id == "deliver_sm": 
+                    
+                    ServerID = command_seq_no
+                     
+                    SOURCD_ID = ClientConnector.get_SOURCD_ID()
+                    Msg = "delivery_sm request , SOURCD_ID = %s" % SOURCD_ID
+                    PCA_GenLib.WriteLog(Msg,1)
+                    SocketMutex.acquire()
                     try:
+                      
+                        SocketBuffer[ServerID] = SOURCD_ID
                         
-                        (AcceptorConnection) = SocketBuffer[ServerID]
                     except:
                         
-                        Msg = "get SocketBuffer error =\n%s" % SocketBuffer
+                        Msg = "get SocketBuffer error =\n%s" % self.SocketBuffer
                         PCA_GenLib.WriteLog(Msg,1)
-                        SocketMutex.release()
-                        break
+                    SocketMutex.release()
                         
-                    SocketMutex.release()                    
+                    ServerID = "new_client"   
+                    try:
+                        (AcceptorConnection) = SocketBuffer[ServerID]
+                        Msg = "delivery_sm request , use latest client connection %s" % id(AcceptorConnection)
+                        PCA_GenLib.WriteLog(Msg,1)
+                    except:
+                        x = 1
+                    
                 else:
-                    Msg = "Can not find originl client request connection =\n%s" % SocketBuffer
-                    PCA_GenLib.WriteLog(Msg,1)
-                    Msg = "send back to Client key failure : %s " % Message
-                    PCA_GenLib.WriteLog(Msg,1)
-                    break
+                    
+                    if SocketBuffer.has_key(ServerID):
+                        SocketMutex.acquire() 
+                        try:
+                        
+                            (AcceptorConnection) = SocketBuffer[ServerID]
+                            del SocketBuffer[ServerID]
+                            Msg = "query SocketBuffer for seq_no : %s we got %s" % (command_seq_no,id(AcceptorConnection))
+                            PCA_GenLib.WriteLog(Msg,1)
+                        
+                        except:
+                        
+                            Msg = "get SocketBuffer error =\n%s" % SocketBuffer
+                            PCA_GenLib.WriteLog(Msg,1)
+                            SocketMutex.release()
+                        
+                            Msg = "delivery_sm request , use previouse connection "
+                            PCA_GenLib.WriteLog(Msg,1)
+                            #break
+                        
+                        SocketMutex.release()                    
+                    else:
+                        Msg = "Can not find originl client request connection =\n%s" % SocketBuffer
+                        PCA_GenLib.WriteLog(Msg,1)
+                
                     
                 self.WriteSet = []
                 self.ReadSet = []
                 self.ReadSet.append(AcceptorConnection)   # add to select list, wait
                 self.WriteSet.append(AcceptorConnection)  # add to select list, wait
-                
+                if AcceptorConnection == None:
+                    continue
                 try:                
-                
+                  
                     result = self.sendDataToSocket(AcceptorConnection,Message,TimeOut=0.1,WriteAttempts=3)
                     if result != None:
                     
@@ -434,8 +470,8 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                         ServerID = "new_client"                       
                         self.SocketBuffer[ServerID] = (self.connection)
                         
-                        Msg = "socket buffer : %s " % self.SocketBuffer
-                        PCA_GenLib.WriteLog(Msg,2)
+                        #Msg = "socket buffer : %s " % self.SocketBuffer
+                        #PCA_GenLib.WriteLog(Msg,2)
                         
                         SocketMutex.release() 
                         
@@ -537,6 +573,7 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                   
             self.parser.parse(Message)
             command_id = self.handler.get_smpp_command_desc()
+            command_seq_no = self.handler.get_smpp_seq_no()
             #if resp_data == "deliver_sm":
             Msg = "recv from Client =*%s*" % command_id
             PCA_GenLib.WriteLog(Msg,1)
@@ -548,15 +585,17 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
             
                 Msg = "recv from Client but no bind request yet ,id=<%s>" % (client_connection_id)
                 PCA_GenLib.WriteLog(Msg,0)
-                command_seq_no = self.handler.get_smpp_seq_no()
+                
                 self.SMPPWriter = PCA_SMPPMessage.SMPP_PDU_Writer(command_seq_no)
          
-                if command_id == "bind_transmitter":
+                if command_id == "bind_transceiver":
                     (system_id,system_type,passwd) = self.handler.get_smpp_bind_info()
                     
                     if (system_id == self.UID) and (system_type == self.TYPE) and (passwd == self.PASSWD):           
-                        self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.bind_transmitter_resp)
-                        self.response_message = self.SMPPWriter.ConstructParameter("gateway")
+                        self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.bind_transceiver_resp)
+                        self.response_message = self.SMPPWriter.ConstructParameter("gateway"+chr(0x00))
+                        #Msg = " data =\n%s" % PCA_GenLib.HexDump(self.response_message)
+                        #PCA_GenLib.WriteLog(Msg,0)
                     
                         self.ConnectionLoginState[id(self.SocketConnection)] = 'Y'
                     else:
@@ -584,16 +623,23 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                 elif command_id == "unbind":                    
                     self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.unbind_resp)
                     self.response_message = self.SMPPWriter.ConstructParameter()
-             
+                elif command_id == "enquire_link":
+                    self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.enquire_link_resp)
+                    self.response_message = self.SMPPWriter.ConstructParameter()
                 else:
+                    Msg = " client message  =\n%s" % PCA_GenLib.HexDump(Message)
+                    PCA_GenLib.WriteLog(Msg,0)
                     Msg = "unexpected data ,id=<%s> , no response " % (client_connection_id)
                     PCA_GenLib.WriteLog(Msg,0)
-                    return
+                    return 
 
-                try:                
-                    result = self.sendDataToSocket(AcceptorConnection,self.response_message,TimeOut=0.1,WriteAttempts=3)
+                self.parser.parse(self.response_message)
+                try:     
                     Msg = "send response back to Client " 
                     PCA_GenLib.WriteLog(Msg,0) 
+                   
+                    result = self.sendDataToSocket(AcceptorConnection,self.response_message,TimeOut=0.1,WriteAttempts=3)
+                   
                     return
 
                 except:
@@ -612,16 +658,18 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                         
                         ######### Get one XMLServer Connection fd for send request ##############
                         
-                        
-                        destination_addr = self.handler.get_smpp_destination_addr()  
-                        Msg = "destination_addr = %s" % destination_addr
-                        PCA_GenLib.WriteLog(Msg,5)
-                        
                         try:
+                            destination_addr = self.handler.get_smpp_destination_addr()  
+                            Msg = "destination_addr = %s" % destination_addr
+                            PCA_GenLib.WriteLog(Msg,5)
+                        
+                        
                             self.target_id = int(destination_addr) % 3
                             self.target_id = self.target_id + 1
                         except:
                             self.target_id = 1
+                            Msg = "delivery_sm_resp use source_id=1"
+                            PCA_GenLib.WriteLog(Msg,1)
                         
                         
                         Msg = "target_id = %s" % self.target_id
@@ -631,6 +679,18 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                             if int(Source_id) == self.target_id:
                                 break
                        
+                        ServerID = command_seq_no
+                        SocketMutex.acquire() 
+                        try:
+                            Msg = "SocketBuffer %s=%s" % (command_seq_no,id(AcceptorConnection))
+                            PCA_GenLib.WriteLog(Msg,1)
+                            self.SocketBuffer[ServerID] = AcceptorConnection
+                        except:
+                        
+                            Msg = "get SocketBuffer error =\n%s" % self.SocketBuffer
+                            PCA_GenLib.WriteLog(Msg,1)
+                        SocketMutex.release()
+                        
                         result = ClientConnector.sendDataToSocket(Message,TimeOutSeconds=0.01,WriteAttempts=1)
                         if result != None:
                             Msg = "send to Server Source_id=<%s> ok " % (Source_id)
@@ -643,18 +703,71 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                             PCA_GenLib.WriteLog(Msg,1)  
                         
                                        
-                
+                    elif command_id == "enquire_link":
+                        
+                        self.SMPPWriter = PCA_SMPPMessage.SMPP_PDU_Writer(command_seq_no)
+                        self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.enquire_link_resp)
+                        self.response_message = self.SMPPWriter.ConstructParameter()
+                        self.parser.parse(self.response_message)
+                        Msg = "send response back to Client " 
+                        PCA_GenLib.WriteLog(Msg,0) 
+                        self.sendDataToSocket(AcceptorConnection,self.response_message,0.1,3)
+            
                     elif command_id == "unbind":     
                         Msg = "unbind requeset , send unbind and remove id=%s" % id(self.SocketConnection)
                         PCA_GenLib.WriteLog(Msg,2)
+                        
+                        self.SMPPWriter = PCA_SMPPMessage.SMPP_PDU_Writer(command_seq_no)
                         self.SMPPWriter.ConstructHeader(PCA_SMPP_Parameter_Tag.unbind_resp)
                         self.response_message = self.SMPPWriter.ConstructParameter()
                         self.ConnectionLoginState[id(self.SocketConnection)] = 'N'
+                        self.parser.parse(self.response_message)
                         Msg = "send response back to Client " 
                         PCA_GenLib.WriteLog(Msg,0) 
                         self.sendDataToSocket(AcceptorConnection,self.response_message,0.1,3)
                         
-             
+                    elif command_id == "deliver_sm_resp": 
+                        ServerID = command_seq_no
+                        SocketMutex.acquire() 
+                        try:
+                        
+                            SOURCD_ID = self.SocketBuffer[ServerID]
+                            del self.SocketBuffer[ServerID]
+                            Msg = "query SocketBuffer for deliver_sm_resp seq_no : %s we got %s" % (command_seq_no,SOURCD_ID)
+                            PCA_GenLib.WriteLog(Msg,1)
+                        
+                        except:
+                        
+                            Msg = "get SocketBuffer error =\n%s" % self.SocketBuffer
+                            PCA_GenLib.WriteLog(Msg,1)
+                            SocketMutex.release()
+                        
+                            Msg = "delivery_sm request , use SOURCD_ID = 1 "
+                            PCA_GenLib.WriteLog(Msg,1)
+                            SOURCD_ID = 1
+                          
+                        
+                        SocketMutex.release()  
+                        Msg = "send response back to Client " 
+                        PCA_GenLib.WriteLog(Msg,0) 
+                        for (ClientConnector,Source_id) in self.ClientConnectorList:
+                            if int(Source_id) == int(SOURCD_ID):
+                                break
+                                
+                        result = ClientConnector.sendDataToSocket(Message,TimeOutSeconds=0.01,WriteAttempts=1)
+                        if result != None:
+                            Msg = "send to Server Source_id=<%s> ok " % (Source_id)
+                            PCA_GenLib.WriteLog(Msg,2)
+                        else:
+                            Msg = "send to Server Source_id=<%s> failure timeout " %  (Source_id)
+                            PCA_GenLib.WriteLog(Msg,1)  
+
+                            Msg = "Close Connection: source_id=*%s* " % Source_id
+                            PCA_GenLib.WriteLog(Msg,1)  
+                      
+                       
+                        
+                        
                     else:
                         Msg = "un-support command , ignore"
                         PCA_GenLib.WriteLog(Msg,1)  

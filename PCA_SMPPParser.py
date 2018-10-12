@@ -137,6 +137,9 @@ class Parser(PCA_Parser.Parser):
                     command_id = PCA_SMPP_Parameter_Tag.command_id_dict[attrs]
                 except:
                     command_id  = 'undef'
+                   
+                    Msg = " undef SMPP command id  =\n%s" % PCA_GenLib.HexDump(attrs)
+                    PCA_GenLib.WriteLog(Msg,0)
             
                 content = command_id
                 self.set_handler(name,attrs,content)
@@ -311,7 +314,7 @@ class Parser(PCA_Parser.Parser):
                     
                     
                     
-                elif command_id == "bind_transmitter":
+                elif command_id == "bind_transmitter" or command_id == "bind_transceiver":
                     start_pos = string.find(source,chr(0x00))                    
                     system_id = source[0:start_pos]                    
                     name = "system_id"
