@@ -165,10 +165,10 @@ class ResponseHandler(PCA_ServerSocket.Acceptor):
                         PCA_GenLib.WriteLog(Msg,1)
                     SocketMutex.release()
                         
-                    ServerID = "new_client"   
+                    ServerID = "active_client"   
                     try:
                         (AcceptorConnection) = SocketBuffer[ServerID]
-                        Msg = "delivery_sm request , use latest client connection %s" % id(AcceptorConnection)
+                        Msg = "delivery_sm request , use latest active client connection %s" % id(AcceptorConnection)
                         PCA_GenLib.WriteLog(Msg,1)
                     except:
                         x = 1
@@ -467,12 +467,8 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                         client_port = address[1]
                         
                         SocketMutex.acquire()
-                        ServerID = "new_client"                       
-                        self.SocketBuffer[ServerID] = (self.connection)
-                        
-                        #Msg = "socket buffer : %s " % self.SocketBuffer
-                        #PCA_GenLib.WriteLog(Msg,2)
-                        
+                        ServerID = "active_client"                       
+                        self.SocketBuffer[ServerID] = (self.connection)                        
                         SocketMutex.release() 
                         
                     else:
@@ -480,6 +476,11 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                             self.ConnectionLoginState[id(self.SocketConnection)] = 'N'
                             Msg = "Set ConnectionLoginState <%s> to N " % id(self.SocketConnection)
                             PCA_GenLib.WriteLog(Msg,0)
+                            
+                        SocketMutex.acquire()
+                        ServerID = "active_client"                       
+                        self.SocketBuffer[ServerID] = (self.SocketConnection)                        
+                        SocketMutex.release() 
                         
                         self.handle_event(self.SocketConnection)
             

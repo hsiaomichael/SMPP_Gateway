@@ -7,7 +7,7 @@ Ack as SMPP Gateway
 </br> 3 : receive client submit_sm request and send to service(remote SMSC) using b-address binding
 </br> 4 : receive remote SMSC deliver_sm request and send back to client
 
-</br> ps : deliver_sm request always send to latest smpp client connection
+</br> ps : deliver_sm request always send to latest active smpp client connection
 
 </br>
 copy all files to same directory
