@@ -1,83 +1,639 @@
-2018-10-11 21:35:42.702 DB0 PCA_GenLib.py(315)==> Debug level = <2>, Debug log = <SMPPGateway.log>
-2018-10-11 21:35:42.703 DB1 PCA_ServerSocket.py(29)==> Listen Host=<127.0.0.1>,Port=<5001>
-2018-10-11 21:35:42.704 DB0 PCA_ServerSocket.py(55)==> setsockopt..bind port = <5001>.
-2018-10-11 21:35:42.704 DB1 PCA_Gateway.py(307)==> SYSTEM_ID  = <smpp_id>
-2018-10-11 21:35:42.704 DB1 PCA_Gateway.py(312)==> SYSTEM_TYPE  = <1>
-2018-10-11 21:35:42.704 DB1 PCA_Gateway.py(317)==> PASSWD  = <smpp_pwd>
-2018-10-11 21:35:42.705 DB1 PCA_Gateway.py(352)==> CLIENT_SOCKET=PCA_SMPPClientSocket
-2018-10-11 21:35:42.705 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
-2018-10-11 21:35:42.706 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
-2018-10-11 21:35:42.706 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
-2018-10-11 21:35:42.708 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
-2018-10-11 21:35:42.711 DB2 PCA_SMPPParser.py(152)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
-2018-10-11 21:35:42.711 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
-2018-10-11 21:35:42.712 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
-2018-10-11 21:35:43.212 DB1 PCA_Gateway.py(367)==> SOURCD_ID=1
-2018-10-11 21:35:43.215 DB1 PCA_Gateway.py(352)==> CLIENT_SOCKET=PCA_SMPPClientSocket
-2018-10-11 21:35:43.215 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
-2018-10-11 21:35:43.218 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
-2018-10-11 21:35:43.219 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
-2018-10-11 21:35:43.222 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
-2018-10-11 21:35:43.223 DB2 PCA_SMPPParser.py(152)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
-2018-10-11 21:35:43.223 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
-2018-10-11 21:35:43.223 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
-2018-10-11 21:35:43.724 DB1 PCA_Gateway.py(367)==> SOURCD_ID=2
-2018-10-11 21:35:43.725 DB1 PCA_Gateway.py(352)==> CLIENT_SOCKET=PCA_SMPPClientSocket
-2018-10-11 21:35:43.727 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
-2018-10-11 21:35:43.727 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
-2018-10-11 21:35:43.730 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
-2018-10-11 21:35:43.730 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
-2018-10-11 21:35:43.733 DB2 PCA_SMPPParser.py(152)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
-2018-10-11 21:35:43.734 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
-2018-10-11 21:35:43.734 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
-2018-10-11 21:35:44.235 DB1 PCA_Gateway.py(367)==> SOURCD_ID=3
-2018-10-11 21:35:44.236 DB1 PCA_Gateway.py(352)==> CLIENT_SOCKET=PCA_SMPPClientSocket
-2018-10-11 21:35:44.236 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
-2018-10-11 21:35:44.237 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
-2018-10-11 21:35:44.239 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
-2018-10-11 21:35:44.239 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
-2018-10-11 21:35:44.241 DB2 PCA_SMPPParser.py(152)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
-2018-10-11 21:35:44.241 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
-2018-10-11 21:35:44.241 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
-2018-10-11 21:35:44.742 DB1 PCA_Gateway.py(367)==> SOURCD_ID=4
-2018-10-11 21:35:44.743 DB1 PCA_Gateway.py(352)==> CLIENT_SOCKET=PCA_SMPPClientSocket
-2018-10-11 21:35:44.744 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
-2018-10-11 21:35:44.745 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
-2018-10-11 21:35:44.745 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
-2018-10-11 21:35:44.746 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
-2018-10-11 21:35:44.750 DB2 PCA_SMPPParser.py(152)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
-2018-10-11 21:35:44.751 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
-2018-10-11 21:35:44.751 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
-2018-10-11 21:35:45.253 DB1 PCA_Gateway.py(367)==> SOURCD_ID=5
-2018-10-11 21:35:45.253 DB1 PCA_Gateway.py(392)==> dispatcher server starting ........
-2018-10-11 21:35:46.549 DB1 PCA_Gateway.py(425)==> Dispatcher New Connection <140024664194080> from :('127.0.0.1', 37530)
-2018-10-11 21:35:46.549 DB2 PCA_Gateway.py(439)==> socket buffer : {} 
-2018-10-11 21:35:46.550 DB0 PCA_Gateway.py(447)==> Set ConnectionLoginState <140024664194080> to N 
-2018-10-11 21:35:46.550 DB2 PCA_Gateway.py(536)==> recv from Client : id=<140024664194080>
-2018-10-11 21:35:46.551 DB2 PCA_SMPPParser.py(152)==> REQ_TID=<0>,command_length=<40>,command_id=<bind_transmitter>,command_status=<0>,sequence_number=<0>
-2018-10-11 21:35:46.551 DB2 PCA_SMPPParser.py(165)==> system_id = <smpp_id>
-2018-10-11 21:35:46.551 DB2 PCA_SMPPParser.py(175)==> password = <smpp_pwd>
-2018-10-11 21:35:46.551 DB2 PCA_SMPPParser.py(185)==> system_type = <1>
-2018-10-11 21:35:46.552 DB1 PCA_Gateway.py(543)==> recv from Client =*bind_transmitter*
-2018-10-11 21:35:46.552 DB0 PCA_Gateway.py(551)==> recv from Client but no bind request yet ,id=<140024664194080>
-2018-10-11 21:35:46.552 DB0 PCA_Gateway.py(597)==> send response back to Client 
-2018-10-11 21:35:46.556 DB2 PCA_Gateway.py(536)==> recv from Client : id=<140024664194080>
-2018-10-11 21:35:46.556 DB2 PCA_SMPPParser.py(152)==> REQ_TID=<66>,command_length=<60>,command_id=<submit_sm>,command_status=<0>,sequence_number=<66>
-2018-10-11 21:35:46.556 DB1 PCA_Gateway.py(543)==> recv from Client =*submit_sm*
-2018-10-11 21:35:46.556 DB1 PCA_Gateway.py(618)==> target_id = 1
-2018-10-11 21:35:46.557 DB2 PCA_Gateway.py(643)==> send to Server Source_id=<1> ok 
-2018-10-11 21:35:46.559 DB2 PCA_SMPPParser.py(152)==> REQ_TID=<66>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<66>
-2018-10-11 21:35:46.559 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
-2018-10-11 21:35:46.560 DB1 PCA_Gateway.py(179)==> send back to Client ok : id=<140024664194080>
-2018-10-11 21:35:46.562 DB2 PCA_Gateway.py(536)==> recv from Client : id=<140024664194080>
-2018-10-11 21:35:46.562 DB2 PCA_SMPPParser.py(152)==> REQ_TID=<99>,command_length=<16>,command_id=<unbind>,command_status=<0>,sequence_number=<99>
-2018-10-11 21:35:46.562 DB1 PCA_Gateway.py(543)==> recv from Client =*unbind*
-2018-10-11 21:35:46.563 DB2 PCA_Gateway.py(655)==> unbind requeset , send unbind and remove id=140024664194080
-2018-10-11 21:35:46.563 DB0 PCA_Gateway.py(660)==> send response back to Client 
-2018-10-11 21:35:49.563 DB2 PCA_ServerSocket.py(222)==> Del ConnectionLoginState <140024664194080>
-2018-10-11 21:35:49.564 DB1 PCA_Gateway.py(516)==> RequestHandler readDataFromSocket Client socket.error
-2018-10-11 21:35:49.564 DB1 PCA_Gateway.py(519)==> close Client connection id=<140024664194080>
-2018-10-11 21:35:49.565 DB0 PCA_Gateway.py(528)==> Del ConnectionLoginState
-2018-10-11 21:35:49.565 DB1 PCA_Gateway.py(686)==> close client connection id=<140024664194080>
-2018-10-11 21:35:54.251 DB0 PCA_Gateway.py(464)==> dispatcher error : <<type 'exceptions.KeyboardInterrupt'>>,<> 
-2018-10-11 21:35:54.439 DB0 PCA_GenLib.py(521)==> Close Debug Log , Debug level = <2>, Debug log = <SMPPGateway.log>
+2018-10-12 12:01:40.939 DB0 PCA_GenLib.py(315)==> Debug level = <2>, Debug log = <SMPPGateway.log>
+2018-10-12 12:01:40.940 DB1 PCA_ServerSocket.py(29)==> Listen Host=<127.0.0.1>,Port=<5001>
+2018-10-12 12:01:40.941 DB0 PCA_ServerSocket.py(55)==> setsockopt..bind port = <5001>.
+2018-10-12 12:01:40.941 DB1 PCA_Gateway.py(306)==> SYSTEM_ID  = <smpp_id>
+2018-10-12 12:01:40.941 DB1 PCA_Gateway.py(311)==> SYSTEM_TYPE  = <1>
+2018-10-12 12:01:40.942 DB1 PCA_Gateway.py(316)==> PASSWD  = <smpp_pwd>
+2018-10-12 12:01:40.942 DB1 PCA_Gateway.py(351)==> CLIENT_SOCKET=PCA_SMPPClientSocket
+2018-10-12 12:01:40.942 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
+2018-10-12 12:01:40.943 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
+2018-10-12 12:01:40.943 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
+2018-10-12 12:01:40.944 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
+2018-10-12 12:01:40.947 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
+2018-10-12 12:01:40.948 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
+2018-10-12 12:01:40.948 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
+2018-10-12 12:01:41.449 DB1 PCA_Gateway.py(366)==> SOURCD_ID=1
+2018-10-12 12:01:41.450 DB1 PCA_Gateway.py(351)==> CLIENT_SOCKET=PCA_SMPPClientSocket
+2018-10-12 12:01:41.452 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
+2018-10-12 12:01:41.453 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
+2018-10-12 12:01:41.454 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
+2018-10-12 12:01:41.455 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
+2018-10-12 12:01:41.460 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
+2018-10-12 12:01:41.461 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
+2018-10-12 12:01:41.461 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
+2018-10-12 12:01:41.964 DB1 PCA_Gateway.py(366)==> SOURCD_ID=2
+2018-10-12 12:01:41.964 DB1 PCA_Gateway.py(351)==> CLIENT_SOCKET=PCA_SMPPClientSocket
+2018-10-12 12:01:41.965 DB1 PCA_SMPPClientSocket.py(26)==> Connector init ...
+2018-10-12 12:01:41.966 DB1 PCA_SMPPClientSocket.py(108)==> Connect to Host=<127.0.0.1>,Port=<5000>
+2018-10-12 12:01:41.966 DB1 PCA_SMPPClientSocket.py(114)==> Connect to server - connection created 
+2018-10-12 12:01:41.967 DB1 PCA_SMPPClientSocket.py(134)==> send bind receiver to server ok
+2018-10-12 12:01:41.971 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<100>,command_length=<26>,command_id=<bind_transceiver_resp>,command_status=<0>,sequence_number=<100>
+2018-10-12 12:01:41.972 DB1 PCA_SMPPClientSocket.py(149)==> recv from Client =*bind_transceiver_resp* , check command status
+2018-10-12 12:01:41.972 DB1 PCA_SMPPClientSocket.py(158)==> command status = <0>, bind successful
+2018-10-12 12:01:42.473 DB1 PCA_Gateway.py(366)==> SOURCD_ID=3
+2018-10-12 12:01:42.473 DB1 PCA_Gateway.py(391)==> dispatcher server starting ........
+2018-10-12 12:01:43.177 DB1 PCA_Gateway.py(424)==> Dispatcher New Connection <139925563759200> from :('127.0.0.1', 38610)
+2018-10-12 12:01:43.177 DB2 PCA_Gateway.py(437)==> socket buffer : {'new_client': <socket._socketobject object at 0x7f42f585da60>} 
+2018-10-12 12:01:43.177 DB0 PCA_Gateway.py(445)==> Set ConnectionLoginState <139925563759200> to N 
+2018-10-12 12:01:43.178 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:01:43.178 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<101>,command_length=<40>,command_id=<bind_transmitter>,command_status=<0>,sequence_number=<101> , system_id = <smpp_id> , password = <smpp_pwd> , system_type = <1>
+2018-10-12 12:01:43.178 DB1 PCA_Gateway.py(541)==> recv from Client =*bind_transmitter*
+2018-10-12 12:01:43.179 DB0 PCA_Gateway.py(549)==> recv from Client but no bind request yet ,id=<139925563759200>
+2018-10-12 12:01:43.179 DB0 PCA_Gateway.py(595)==> send response back to Client 
+2018-10-12 12:01:43.181 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:01:43.182 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<102>,command_length=<70>,command_id=<submit_sm>,command_status=<0>,sequence_number=<102> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:01:43.182 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:01:43.182 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:01:43.185 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<102>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<102>
+2018-10-12 12:01:43.185 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:01:43.186 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:01:45.191 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:01:45.192 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<103>,command_length=<70>,command_id=<submit_sm>,command_status=<0>,sequence_number=<103> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:01:45.192 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:01:45.192 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:01:45.196 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<103>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<103>
+2018-10-12 12:01:45.197 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:01:45.197 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:01:47.202 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:01:47.203 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<104>,command_length=<70>,command_id=<submit_sm>,command_status=<0>,sequence_number=<104> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:01:47.204 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:01:47.204 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:01:47.207 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<104>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<104>
+2018-10-12 12:01:47.208 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:01:47.209 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:01:49.215 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:01:49.216 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<105>,command_length=<70>,command_id=<submit_sm>,command_status=<0>,sequence_number=<105> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:01:49.216 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:01:49.216 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:01:49.220 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<105>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<105>
+2018-10-12 12:01:49.220 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:01:49.221 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:01:51.224 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:01:51.225 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<106>,command_length=<70>,command_id=<submit_sm>,command_status=<0>,sequence_number=<106> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:01:51.225 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:01:51.226 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:01:51.229 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<106>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<106>
+2018-10-12 12:01:51.230 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:01:51.231 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:01:53.236 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:01:53.237 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<107>,command_length=<70>,command_id=<submit_sm>,command_status=<0>,sequence_number=<107> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:01:53.237 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:01:53.238 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:01:53.242 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<107>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<107>
+2018-10-12 12:01:53.243 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:01:53.244 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:01:55.248 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:01:55.249 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<108>,command_length=<70>,command_id=<submit_sm>,command_status=<0>,sequence_number=<108> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:01:55.249 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:01:55.250 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:01:55.254 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<108>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<108>
+2018-10-12 12:01:55.254 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:01:55.256 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:01:57.261 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:01:57.262 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<109>,command_length=<70>,command_id=<submit_sm>,command_status=<0>,sequence_number=<109> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:01:57.262 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:01:57.262 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:01:57.265 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<109>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<109>
+2018-10-12 12:01:57.265 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:01:57.266 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:01:58.876 DB2 PCA_ServerSocket.py(203)==> Client Close Connection id=<139925563759200>
+2018-10-12 12:01:58.877 DB2 PCA_ServerSocket.py(222)==> Del ConnectionLoginState <139925563759200>
+2018-10-12 12:01:58.878 DB1 PCA_Gateway.py(514)==> RequestHandler readDataFromSocket Client socket.error
+2018-10-12 12:01:58.878 DB1 PCA_Gateway.py(517)==> close Client connection id=<139925563759200>
+2018-10-12 12:01:58.878 DB0 PCA_Gateway.py(526)==> Del ConnectionLoginState
+2018-10-12 12:01:58.879 DB1 PCA_Gateway.py(679)==> close client connection id=<139925563759200>
+2018-10-12 12:02:32.111 DB1 PCA_Gateway.py(424)==> Dispatcher New Connection <139925563759312> from :('127.0.0.1', 38612)
+2018-10-12 12:02:32.112 DB2 PCA_Gateway.py(437)==> socket buffer : {'new_client': <socket._socketobject object at 0x7f42f585dad0>} 
+2018-10-12 12:02:32.112 DB0 PCA_Gateway.py(445)==> Set ConnectionLoginState <139925563759312> to N 
+2018-10-12 12:02:32.112 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759312>
+2018-10-12 12:02:32.113 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<101>,command_length=<40>,command_id=<bind_transmitter>,command_status=<0>,sequence_number=<101> , system_id = <smpp_id> , password = <smpp_pwd> , system_type = <1>
+2018-10-12 12:02:32.113 DB1 PCA_Gateway.py(541)==> recv from Client =*bind_transmitter*
+2018-10-12 12:02:32.113 DB0 PCA_Gateway.py(549)==> recv from Client but no bind request yet ,id=<139925563759312>
+2018-10-12 12:02:32.113 DB0 PCA_Gateway.py(595)==> send response back to Client 
+2018-10-12 12:02:32.115 DB2 PCA_ServerSocket.py(203)==> Client Close Connection id=<139925563759312>
+2018-10-12 12:02:32.116 DB2 PCA_ServerSocket.py(222)==> Del ConnectionLoginState <139925563759312>
+2018-10-12 12:02:32.116 DB1 PCA_Gateway.py(514)==> RequestHandler readDataFromSocket Client socket.error
+2018-10-12 12:02:32.116 DB1 PCA_Gateway.py(517)==> close Client connection id=<139925563759312>
+2018-10-12 12:02:32.117 DB0 PCA_Gateway.py(526)==> Del ConnectionLoginState
+2018-10-12 12:02:32.117 DB1 PCA_Gateway.py(679)==> close client connection id=<139925563759312>
+2018-10-12 12:03:20.973 DB1 PCA_Gateway.py(424)==> Dispatcher New Connection <139925563759424> from :('127.0.0.1', 38614)
+2018-10-12 12:03:20.973 DB2 PCA_Gateway.py(437)==> socket buffer : {'new_client': <socket._socketobject object at 0x7f42f585db40>} 
+2018-10-12 12:03:20.973 DB0 PCA_Gateway.py(445)==> Set ConnectionLoginState <139925563759424> to N 
+2018-10-12 12:03:20.973 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:20.974 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<101>,command_length=<40>,command_id=<bind_transmitter>,command_status=<0>,sequence_number=<101> , system_id = <smpp_id> , password = <smpp_pwd> , system_type = <1>
+2018-10-12 12:03:20.974 DB1 PCA_Gateway.py(541)==> recv from Client =*bind_transmitter*
+2018-10-12 12:03:20.974 DB0 PCA_Gateway.py(549)==> recv from Client but no bind request yet ,id=<139925563759424>
+2018-10-12 12:03:20.974 DB0 PCA_Gateway.py(595)==> send response back to Client 
+2018-10-12 12:03:20.976 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:20.976 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<102>,command_length=<71>,command_id=<submit_sm>,command_status=<0>,sequence_number=<102> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617900> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:20.976 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:20.977 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:20.979 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<102>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<102>
+2018-10-12 12:03:20.979 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:20.980 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:22.983 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:22.984 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<103>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<103> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179001> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:22.984 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:22.984 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:03:22.988 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<103>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<103>
+2018-10-12 12:03:22.989 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:22.989 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:24.995 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:24.995 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<104>,command_length=<73>,command_id=<submit_sm>,command_status=<0>,sequence_number=<104> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790012> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:24.995 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:24.996 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:24.000 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<104>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<104>
+2018-10-12 12:03:25.000 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:25.001 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:27.006 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:27.007 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<105>,command_length=<74>,command_id=<submit_sm>,command_status=<0>,sequence_number=<105> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617900123> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:27.007 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:27.008 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:27.012 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<105>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<105>
+2018-10-12 12:03:27.013 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:27.013 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:29.019 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:29.020 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<106>,command_length=<75>,command_id=<submit_sm>,command_status=<0>,sequence_number=<106> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179001234> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:29.020 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:29.021 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:03:29.025 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<106>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<106>
+2018-10-12 12:03:29.025 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:29.026 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:31.032 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:31.032 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<107>,command_length=<76>,command_id=<submit_sm>,command_status=<0>,sequence_number=<107> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790012345> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:31.033 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:31.033 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:31.036 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<107>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<107>
+2018-10-12 12:03:31.037 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:31.038 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:33.043 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:33.044 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<108>,command_length=<77>,command_id=<submit_sm>,command_status=<0>,sequence_number=<108> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617900123456> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:33.044 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:33.045 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:33.049 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<108>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<108>
+2018-10-12 12:03:33.050 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:33.052 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:35.057 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:35.057 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<109>,command_length=<78>,command_id=<submit_sm>,command_status=<0>,sequence_number=<109> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179001234567> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:35.057 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:35.058 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:03:35.064 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<109>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<109>
+2018-10-12 12:03:35.065 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:35.065 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:37.072 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:37.073 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<110>,command_length=<79>,command_id=<submit_sm>,command_status=<0>,sequence_number=<110> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790012345678> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:37.073 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:37.073 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:37.077 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<110>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<110>
+2018-10-12 12:03:37.078 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:37.078 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:39.085 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:39.086 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<111>,command_length=<80>,command_id=<submit_sm>,command_status=<0>,sequence_number=<111> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617900123456789> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:39.086 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:39.087 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:39.090 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<111>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<111>
+2018-10-12 12:03:39.091 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:39.091 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:41.096 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:41.097 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<112>,command_length=<82>,command_id=<submit_sm>,command_status=<0>,sequence_number=<112> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790012345678910> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:41.097 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:41.098 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:03:41.102 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<112>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<112>
+2018-10-12 12:03:41.102 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:41.103 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:43.109 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:43.110 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<113>,command_length=<84>,command_id=<submit_sm>,command_status=<0>,sequence_number=<113> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179001234567891011> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:43.110 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:43.110 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:43.115 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<113>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<113>
+2018-10-12 12:03:43.115 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:43.116 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:45.122 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:45.122 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<114>,command_length=<86>,command_id=<submit_sm>,command_status=<0>,sequence_number=<114> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617900123456789101112> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:45.123 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:45.123 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:45.128 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<114>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<114>
+2018-10-12 12:03:45.129 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:45.130 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:47.135 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:47.136 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<115>,command_length=<88>,command_id=<submit_sm>,command_status=<0>,sequence_number=<115> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790012345678910111213> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:47.136 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:47.137 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:03:47.141 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<115>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<115>
+2018-10-12 12:03:47.141 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:47.142 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:49.149 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:49.150 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<116>,command_length=<90>,command_id=<submit_sm>,command_status=<0>,sequence_number=<116> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179001234567891011121314> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:49.151 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:49.151 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:49.155 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<116>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<116>
+2018-10-12 12:03:49.155 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:49.156 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:51.161 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:51.161 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<117>,command_length=<92>,command_id=<submit_sm>,command_status=<0>,sequence_number=<117> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617900123456789101112131415> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:51.162 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:51.162 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:51.166 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<117>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<117>
+2018-10-12 12:03:51.166 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:51.167 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:53.172 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:53.173 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<118>,command_length=<94>,command_id=<submit_sm>,command_status=<0>,sequence_number=<118> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <6585861790012345678910111213141516> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:53.173 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:53.174 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:03:53.177 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<118>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<118>
+2018-10-12 12:03:53.178 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:53.179 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:55.184 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:55.187 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<119>,command_length=<96>,command_id=<submit_sm>,command_status=<0>,sequence_number=<119> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179001234567891011121314151617> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:55.187 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:55.188 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:55.192 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<119>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<119>
+2018-10-12 12:03:55.193 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:55.193 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:57.200 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759424>
+2018-10-12 12:03:57.200 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<120>,command_length=<98>,command_id=<submit_sm>,command_status=<0>,sequence_number=<120> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617900123456789101112131415161718> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:03:57.200 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:03:57.201 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:03:57.203 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<120>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<120>
+2018-10-12 12:03:57.204 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:03:57.204 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759424>
+2018-10-12 12:03:57.716 DB2 PCA_ServerSocket.py(203)==> Client Close Connection id=<139925563759424>
+2018-10-12 12:03:57.717 DB2 PCA_ServerSocket.py(222)==> Del ConnectionLoginState <139925563759424>
+2018-10-12 12:03:57.718 DB1 PCA_Gateway.py(514)==> RequestHandler readDataFromSocket Client socket.error
+2018-10-12 12:03:57.718 DB1 PCA_Gateway.py(517)==> close Client connection id=<139925563759424>
+2018-10-12 12:03:57.719 DB0 PCA_Gateway.py(526)==> Del ConnectionLoginState
+2018-10-12 12:03:57.719 DB1 PCA_Gateway.py(679)==> close client connection id=<139925563759424>
+2018-10-12 12:04:33.535 DB1 PCA_Gateway.py(424)==> Dispatcher New Connection <139925563759200> from :('127.0.0.1', 38616)
+2018-10-12 12:04:33.535 DB2 PCA_Gateway.py(437)==> socket buffer : {'new_client': <socket._socketobject object at 0x7f42f585da60>} 
+2018-10-12 12:04:33.535 DB0 PCA_Gateway.py(445)==> Set ConnectionLoginState <139925563759200> to N 
+2018-10-12 12:04:33.536 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:33.536 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<101>,command_length=<40>,command_id=<bind_transmitter>,command_status=<0>,sequence_number=<101> , system_id = <smpp_id> , password = <smpp_pwd> , system_type = <1>
+2018-10-12 12:04:33.536 DB1 PCA_Gateway.py(541)==> recv from Client =*bind_transmitter*
+2018-10-12 12:04:33.536 DB0 PCA_Gateway.py(549)==> recv from Client but no bind request yet ,id=<139925563759200>
+2018-10-12 12:04:33.537 DB0 PCA_Gateway.py(595)==> send response back to Client 
+2018-10-12 12:04:33.539 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:33.539 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<102>,command_length=<71>,command_id=<submit_sm>,command_status=<0>,sequence_number=<102> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617900> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:33.539 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:33.540 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:04:33.542 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<102>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<102>
+2018-10-12 12:04:33.542 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:33.543 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:35.548 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:35.549 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<103>,command_length=<71>,command_id=<submit_sm>,command_status=<0>,sequence_number=<103> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617901> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:35.549 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:35.550 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:04:35.554 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<103>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<103>
+2018-10-12 12:04:35.555 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:35.555 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:37.562 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:37.563 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<104>,command_length=<71>,command_id=<submit_sm>,command_status=<0>,sequence_number=<104> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617902> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:37.564 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:37.565 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:04:37.570 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<104>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<104>
+2018-10-12 12:04:37.570 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:37.571 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:39.579 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:39.580 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<105>,command_length=<71>,command_id=<submit_sm>,command_status=<0>,sequence_number=<105> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617903> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:39.580 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:39.580 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:04:39.584 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<105>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<105>
+2018-10-12 12:04:39.585 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:39.586 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:41.592 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:41.592 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<106>,command_length=<71>,command_id=<submit_sm>,command_status=<0>,sequence_number=<106> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617904> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:41.593 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:41.593 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:04:41.597 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<106>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<106>
+2018-10-12 12:04:41.598 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:41.598 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:43.603 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:43.604 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<107>,command_length=<71>,command_id=<submit_sm>,command_status=<0>,sequence_number=<107> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617905> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:43.604 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:43.605 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:04:43.608 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<107>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<107>
+2018-10-12 12:04:43.609 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:43.609 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:45.615 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:45.616 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<108>,command_length=<71>,command_id=<submit_sm>,command_status=<0>,sequence_number=<108> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617906> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:45.616 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:45.617 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:04:45.621 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<108>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<108>
+2018-10-12 12:04:45.622 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:45.622 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:47.628 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:47.629 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<109>,command_length=<71>,command_id=<submit_sm>,command_status=<0>,sequence_number=<109> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617907> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:47.629 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:47.630 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:04:47.634 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<109>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<109>
+2018-10-12 12:04:47.634 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:47.635 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:49.641 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:49.641 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<110>,command_length=<71>,command_id=<submit_sm>,command_status=<0>,sequence_number=<110> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617908> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:49.642 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:49.642 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:04:49.646 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<110>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<110>
+2018-10-12 12:04:49.647 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:49.647 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:51.653 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:51.654 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<111>,command_length=<71>,command_id=<submit_sm>,command_status=<0>,sequence_number=<111> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <65858617909> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:51.654 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:51.655 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:04:51.659 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<111>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<111>
+2018-10-12 12:04:51.659 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:51.660 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:53.665 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:53.665 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<112>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<112> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179010> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:53.666 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:53.666 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:04:53.671 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<112>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<112>
+2018-10-12 12:04:53.671 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:53.672 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:55.678 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:55.679 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<113>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<113> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179011> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:55.679 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:55.680 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:04:55.684 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<113>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<113>
+2018-10-12 12:04:55.685 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:55.685 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:57.691 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:57.692 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<114>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<114> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179012> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:57.692 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:57.692 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:04:57.697 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<114>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<114>
+2018-10-12 12:04:57.698 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:57.698 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:04:59.706 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:04:59.707 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<115>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<115> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179013> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:04:59.707 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:04:59.708 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:04:59.712 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<115>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<115>
+2018-10-12 12:04:59.712 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:04:59.713 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:01.718 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:01.719 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<116>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<116> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179014> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:01.720 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:01.720 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:05:01.723 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<116>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<116>
+2018-10-12 12:05:01.723 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:01.724 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:03.730 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:03.731 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<117>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<117> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179015> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:03.732 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:03.732 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:05:03.737 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<117>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<117>
+2018-10-12 12:05:03.737 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:03.738 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:05.744 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:05.747 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<118>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<118> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179016> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:05.747 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:05.748 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:05:05.752 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<118>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<118>
+2018-10-12 12:05:05.753 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:05.753 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:07.761 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:07.761 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<119>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<119> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179017> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:07.762 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:07.762 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:05:07.766 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<119>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<119>
+2018-10-12 12:05:07.766 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:07.767 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:09.773 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:09.774 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<120>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<120> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179018> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:09.774 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:09.774 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:05:09.779 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<120>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<120>
+2018-10-12 12:05:09.779 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:09.780 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:11.785 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:11.786 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<121>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<121> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179019> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:11.786 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:11.787 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:05:11.791 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<121>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<121>
+2018-10-12 12:05:11.792 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:11.792 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:13.797 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:13.798 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<122>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<122> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179020> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:13.798 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:13.799 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:05:13.803 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<122>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<122>
+2018-10-12 12:05:13.803 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:13.804 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:15.810 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:15.810 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<123>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<123> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179021> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:15.811 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:15.811 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:05:15.815 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<123>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<123>
+2018-10-12 12:05:15.816 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:15.816 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:17.823 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:17.823 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<124>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<124> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179022> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:17.824 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:17.824 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:05:17.828 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<124>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<124>
+2018-10-12 12:05:17.828 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:17.828 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:19.833 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:19.833 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<125>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<125> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179023> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:19.834 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:19.834 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:05:19.838 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<125>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<125>
+2018-10-12 12:05:19.838 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:19.839 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:21.845 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:21.846 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<126>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<126> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179024> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:21.846 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:21.847 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:05:21.851 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<126>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<126>
+2018-10-12 12:05:21.851 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:21.852 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:23.857 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:23.857 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<127>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<127> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179025> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:23.858 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:23.858 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:05:23.862 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<127>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<127>
+2018-10-12 12:05:23.862 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:23.863 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:25.869 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:25.870 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<128>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<128> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179026> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:25.870 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:25.871 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:05:25.875 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<128>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<128>
+2018-10-12 12:05:25.875 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:25.876 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:27.882 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:27.882 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<129>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<129> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179027> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:27.883 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:27.883 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:05:27.888 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<129>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<129>
+2018-10-12 12:05:27.888 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:27.889 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:29.895 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:29.896 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<130>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<130> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179028> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:29.896 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:29.897 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:05:29.900 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<130>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<130>
+2018-10-12 12:05:29.901 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:29.901 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:31.908 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:31.909 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<131>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<131> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179029> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:31.909 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:31.910 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:05:31.914 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<131>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<131>
+2018-10-12 12:05:31.914 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:31.915 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:33.921 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:33.921 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<132>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<132> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179030> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:33.922 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:33.922 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:05:33.926 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<132>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<132>
+2018-10-12 12:05:33.927 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:33.927 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:35.933 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:35.934 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<133>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<133> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179031> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:35.934 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:35.934 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:05:35.941 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<133>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<133>
+2018-10-12 12:05:35.941 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:35.941 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:37.947 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:37.948 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<134>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<134> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179032> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:37.948 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:37.949 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:05:37.953 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<134>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<134>
+2018-10-12 12:05:37.955 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:37.956 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:39.960 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:39.960 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<135>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<135> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179033> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:39.960 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:39.960 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:05:39.964 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<135>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<135>
+2018-10-12 12:05:39.964 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:39.965 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:41.969 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:41.970 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<136>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<136> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179034> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:41.970 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:41.971 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:05:41.975 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<136>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<136>
+2018-10-12 12:05:41.975 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:41.975 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:43.982 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:43.983 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<137>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<137> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179035> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:43.983 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:43.983 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:05:43.987 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<137>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<137>
+2018-10-12 12:05:43.988 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:43.988 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:45.994 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:45.995 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<138>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<138> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179036> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:45.995 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:45.996 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:05:46.000 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<138>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<138>
+2018-10-12 12:05:46.001 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:46.001 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:48.007 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:48.008 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<139>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<139> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179037> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:48.008 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:48.009 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:05:48.012 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<139>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<139>
+2018-10-12 12:05:48.013 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:48.014 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:50.021 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:50.022 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<140>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<140> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179038> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:50.022 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:50.023 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:05:50.027 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<140>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<140>
+2018-10-12 12:05:50.028 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:50.028 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:52.036 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:52.036 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<141>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<141> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179039> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:52.037 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:52.037 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:05:52.040 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<141>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<141>
+2018-10-12 12:05:52.041 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:52.042 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:54.047 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:54.048 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<142>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<142> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179040> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:54.048 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:54.049 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:05:54.053 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<142>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<142>
+2018-10-12 12:05:54.054 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:54.054 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:56.061 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:56.062 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<143>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<143> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179041> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:56.062 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:56.062 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:05:56.067 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<143>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<143>
+2018-10-12 12:05:56.067 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:56.067 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:05:58.075 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:05:58.076 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<144>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<144> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179042> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:05:58.076 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:05:58.077 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:05:58.083 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<144>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<144>
+2018-10-12 12:05:58.083 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:05:58.083 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:06:00.088 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:06:00.088 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<145>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<145> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179043> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:06:00.089 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:06:00.089 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:06:00.092 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<145>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<145>
+2018-10-12 12:06:00.093 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:06:00.093 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:06:02.097 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:06:02.097 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<146>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<146> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179044> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:06:02.097 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:06:02.097 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:06:02.099 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<146>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<146>
+2018-10-12 12:06:02.099 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:06:02.099 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:06:04.103 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:06:04.104 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<147>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<147> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179045> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:06:04.104 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:06:04.104 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:06:04.106 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<147>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<147>
+2018-10-12 12:06:04.106 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:06:04.107 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:06:06.111 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:06:06.111 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<148>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<148> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179046> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:06:06.111 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:06:06.112 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:06:06.114 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<148>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<148>
+2018-10-12 12:06:06.115 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:06:06.116 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:06:08.120 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:06:08.121 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<149>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<149> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179047> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:06:08.121 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:06:08.121 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:06:08.123 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<149>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<149>
+2018-10-12 12:06:08.124 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:06:08.124 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:06:10.131 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:06:10.131 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<150>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<150> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179048> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:06:10.132 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:06:10.132 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:06:10.136 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<150>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<150>
+2018-10-12 12:06:10.137 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:06:10.138 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:06:12.144 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:06:12.145 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<151>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<151> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179049> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:06:12.145 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:06:12.146 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<3> ok 
+2018-10-12 12:06:12.150 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<151>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<151>
+2018-10-12 12:06:12.151 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:06:12.151 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:06:14.158 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:06:14.158 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<152>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<152> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179050> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:06:14.159 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:06:14.159 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<1> ok 
+2018-10-12 12:06:14.162 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<152>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<152>
+2018-10-12 12:06:14.162 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:06:14.163 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:06:16.168 DB2 PCA_Gateway.py(534)==> recv from Client : id=<139925563759200>
+2018-10-12 12:06:16.169 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<153>,command_length=<72>,command_id=<submit_sm>,command_status=<0>,sequence_number=<153> , service_type = <> , source_addr_ton = <0> , source_addr_npi = <1> , source_addr = <70160> , dest_addr_ton = <1> , dest_addr_npi = <1> , destination_addr = <658586179051> , esm_class = <0> , protocol_id = <0> , priority_flag = <0> , schedule_delivery_time = <> , validity_period = <> , registered_delivery = <0> , replace_if_present_flag = <0> , data_coding = <0> , sm_default_msg_id = <0> , sm_length = <22> , short_message text = <TestSMPP123_1_TON_NPI1>
+2018-10-12 12:06:16.170 DB1 PCA_Gateway.py(541)==> recv from Client =*submit_sm*
+2018-10-12 12:06:16.170 DB2 PCA_Gateway.py(636)==> send to Server Source_id=<2> ok 
+2018-10-12 12:06:16.174 DB2 PCA_SMPPParser.py(341)==> REQ_TID=<153>,command_length=<31>,command_id=<submit_sm_resp>,command_status=<0>,sequence_number=<153>
+2018-10-12 12:06:16.175 DB1 PCA_Gateway.py(140)==> recv from Server =*submit_sm_resp*
+2018-10-12 12:06:16.175 DB1 PCA_Gateway.py(178)==> send back to Client ok : id=<139925563759200>
+2018-10-12 12:06:16.614 DB0 PCA_Gateway.py(462)==> dispatcher error : <<type 'exceptions.KeyboardInterrupt'>>,<> 
+2018-10-12 12:06:16.773 DB0 PCA_GenLib.py(521)==> Close Debug Log , Debug level = <2>, Debug log = <SMPPGateway.log>

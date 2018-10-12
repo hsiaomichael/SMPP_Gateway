@@ -22,6 +22,7 @@ class Handler(PCA_Parser.ContentHandler):
         self.command_desc = None
         self.seq_no = 0
         self.command_status = 0
+        self.destination_addr = None
         (self.system_id,self.system_type,self.passwd) = ("na","na","na")
     
     
@@ -44,6 +45,9 @@ class Handler(PCA_Parser.ContentHandler):
             self.system_type = content 
         elif self.command_name == "password":
             self.passwd = content   
+        elif self.command_name == "destination_addr":
+            self.destination_addr = content     
+            
             
     def endDocument(self,debugstr,TID,SOURCD_ID,response_message ):
         self.DebugStr = debugstr
@@ -64,6 +68,10 @@ class Handler(PCA_Parser.ContentHandler):
          return self.command_status   
     def get_smpp_bind_info(self):
          return (self.system_id,self.system_type,self.passwd)
+    def get_smpp_destination_addr(self):
+         return self.destination_addr
+   
+        
         
 #########################################################################
 # 
@@ -150,20 +158,167 @@ class Parser(PCA_Parser.Parser):
             
             
                 Msg = "REQ_TID=<%s>,command_length=<%s>,command_id=<%s>,command_status=<%s>,sequence_number=<%s>" % (self.TID,command_length,command_id,command_status,sequence_number)
-                PCA_GenLib.WriteLog(Msg,2)
+                #PCA_GenLib.WriteLog(Msg,2)
                 
                 self.DebugStr = Msg
                 
                 source = source[4:]
-                if command_id == "bind_transmitter":
+                if command_id == "submit_sm":
+                    start_pos = string.find(source,chr(0x00))                    
+                    attrs = source[0:start_pos]                    
+                    name = "service_type"
+                    content = attrs
+                    self.set_handler(name,attrs,content)                    
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+                    
+                    source = source[start_pos+1:]
+                    attrs = source[0]
+                    content = struct.unpack("!b",attrs)[0]
+                    name = "source_addr_ton"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+            
+                    source = source[1:]
+                    attrs = source[0]
+                    content = struct.unpack("!b",attrs)[0]
+                    name = "source_addr_npi"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+                    
+                    
+                    source = source[1:]
+                    start_pos = string.find(source,chr(0x00))
+                    attrs = source[0:start_pos]
+                    content = attrs
+                    name = "source_addr"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)                  
+              
+            
+                    source = source[start_pos+1:]                    
+                    attrs = source[0]
+                    content = struct.unpack("!b",attrs)[0]
+                    name = "dest_addr_ton"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+                    
+        
+                    source = source[1:]
+                    attrs = source[0]
+                    content = struct.unpack("!b",attrs)[0]
+                    name = "dest_addr_npi"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+
+                
+                    source = source[1:]
+                    start_pos = string.find(source,chr(0x00))
+                    attrs = source[0:start_pos]
+                    content = attrs
+                    name = "destination_addr"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)  
+                    
+                    
+                    
+                    source = source[start_pos+1:]
+                    attrs = source[0]
+                    content = struct.unpack("!b",attrs)[0]
+                    name = "esm_class"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+                  
+                
+                    source = source[1:]                   
+                    attrs = source[0]
+                    content = struct.unpack("!b",attrs)[0]
+                    name = "protocol_id"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+                  
+                
+                    source = source[1:]
+                    attrs = source[0]
+                    content = struct.unpack("!b",attrs)[0]
+                    name = "priority_flag"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+                    
+                    source = source[1:]
+                    start_pos = string.find(source,chr(0x00))
+                    attrs = source[0:start_pos]
+                    content = attrs
+                    name = "schedule_delivery_time"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)  
+                    
+                    
+                    source = source[start_pos+1:]
+                    start_pos = string.find(source,chr(0x00))
+                    attrs = source[0:start_pos]
+                    content = attrs
+                    name = "validity_period"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)  
+                    
+                    source = source[start_pos+1:]                    
+                    attrs = source[0]
+                    content = struct.unpack("!b",attrs)[0]
+                    name = "registered_delivery"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+                    
+
+                    
+                    source = source[1:]
+                    attrs = source[0]
+                    content = struct.unpack("!b",attrs)[0]
+                    name = "replace_if_present_flag"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+        
+                    source = source[1:]
+                    attrs = source[0]
+                    content = struct.unpack("!b",attrs)[0]
+                    name = "data_coding"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+                    
+                    source = source[1:]
+                    attrs = source[0]
+                    content = struct.unpack("!b",attrs)[0]
+                    name = "sm_default_msg_id"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+                    
+                    source = source[1:]
+                    attrs = source[0]
+                    content = struct.unpack("!B",attrs)[0]
+                    sm_length = content
+                    name = "sm_length"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)
+                    
+                    source = source[1:]
+                    attrs = source[:sm_length]
+                    content = attrs
+                    name = "short_message text"
+                    self.set_handler(name,attrs,content)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)  
+                    
+                    Msg = self.DebugStr
+                   
+                    
+                    
+                    
+                elif command_id == "bind_transmitter":
                     start_pos = string.find(source,chr(0x00))                    
                     system_id = source[0:start_pos]                    
                     name = "system_id"
                     attrs = system_id    
                     content = attrs
                     self.set_handler(name,attrs,content)
-                    Msg = "system_id = <%s>" % system_id
-                    PCA_GenLib.WriteLog(Msg,2)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)  
                     
                     source = source[start_pos+1:]
                     start_pos = string.find(source,chr(0x00))
@@ -172,8 +327,7 @@ class Parser(PCA_Parser.Parser):
                     attrs = password    
                     content = attrs
                     self.set_handler(name,attrs,content)
-                    Msg = "password = <%s>" % password
-                    PCA_GenLib.WriteLog(Msg,2)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content)  
                     
                     source = source[start_pos+1:]
                     start_pos = string.find(source,chr(0x00))
@@ -182,10 +336,10 @@ class Parser(PCA_Parser.Parser):
                     attrs = system_type    
                     content = attrs
                     self.set_handler(name,attrs,content)
-                    Msg = "system_type = <%s>" % system_type
-                    PCA_GenLib.WriteLog(Msg,2)
+                    self.DebugStr = "%s , %s = <%s>" % (self.DebugStr,name,content) 
+                    Msg = self.DebugStr
                   
-                
+                PCA_GenLib.WriteLog(Msg,2)
             
             if self.StartParsing == 1:
                 self._cont_handler.endDocument(self.DebugStr,self.TID,self.SOURCD_ID,source)

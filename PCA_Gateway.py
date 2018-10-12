@@ -142,15 +142,14 @@ class ResponseHandler(PCA_ServerSocket.Acceptor):
                 #####################################################################
                 ##                Send back to client                 
                 ##################################################################### 
-                ServerID = self.handler.get_smpp_seq_no()
+                ServerID = "new_client"
                 
                 
                 if SocketBuffer.has_key(ServerID):
                     SocketMutex.acquire() 
                     try:
-                        #(AcceptorConnection,client_ip,client_port) = SocketBuffer[ServerID]
+                        
                         (AcceptorConnection) = SocketBuffer[ServerID]
-                        del SocketBuffer[ServerID]
                     except:
                         
                         Msg = "get SocketBuffer error =\n%s" % SocketBuffer
@@ -432,9 +431,8 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                         client_port = address[1]
                         
                         SocketMutex.acquire()
-                        #ServiceID = "%s" % id(self.connection)
-                        #ServiceID = "na"
-                        #self.SocketBuffer[ServiceID] = (self.connection,client_ip,client_port)
+                        ServerID = "new_client"                       
+                        self.SocketBuffer[ServerID] = (self.connection)
                         
                         Msg = "socket buffer : %s " % self.SocketBuffer
                         PCA_GenLib.WriteLog(Msg,2)
@@ -482,7 +480,7 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
     ########################################################
     def handle_event(self,AcceptorConnection): 
         command_seq_no = 0
-        ServerID = 0
+        
         try:    
             Msg = "RequestHandler handle_event Init ..."
             PCA_GenLib.WriteLog(Msg,9)
@@ -613,31 +611,26 @@ class ThreadAcceptor(PCA_ThreadServer.ThreadAcceptor):
                     if command_id == "submit_sm":     
                         
                         ######### Get one XMLServer Connection fd for send request ##############
-                       
+                        
+                        
+                        destination_addr = self.handler.get_smpp_destination_addr()  
+                        Msg = "destination_addr = %s" % destination_addr
+                        PCA_GenLib.WriteLog(Msg,5)
+                        
+                        try:
+                            self.target_id = int(destination_addr) % 3
+                            self.target_id = self.target_id + 1
+                        except:
+                            self.target_id = 1
+                        
                         
                         Msg = "target_id = %s" % self.target_id
-                        PCA_GenLib.WriteLog(Msg,1)
+                        PCA_GenLib.WriteLog(Msg,5)
                 
                         for (ClientConnector,Source_id) in self.ClientConnectorList:
                             if int(Source_id) == self.target_id:
                                 break
-                                
-                        self.target_id = self.target_id + 1        
-                        if self.target_id > self.number_of_server_connection:
-                            self.target_id = 1
-                        
-                   
-               
-                        command_seq_no = self.handler.get_smpp_seq_no()  
-                        ServerID = command_seq_no
-                        SocketMutex.acquire() 
-                        try:
-                            self.SocketBuffer[ServerID] = (AcceptorConnection) 
-                        except:                
-                            Msg = "get SocketBuffer error =\n%s" % self.SocketBuffer
-                            PCA_GenLib.WriteLog(Msg,1)
-                        SocketMutex.release()
-                        
+                       
                         result = ClientConnector.sendDataToSocket(Message,TimeOutSeconds=0.01,WriteAttempts=1)
                         if result != None:
                             Msg = "send to Server Source_id=<%s> ok " % (Source_id)
